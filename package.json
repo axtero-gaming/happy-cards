@@ -3,13 +3,9 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "com:clean-dist": "gulp --gulpfile=./gulpfile.js clean-dist",
-    "dev:build": "npm run com:clean-dist && ng build --configuration=local --base-href /",
     "dev:start:server": "ng build --watch --configuration=local --base-href /",
     "dev:start": "ng serve",
-    "release:build": "ng build --configuration=release --base-href /",
-    "i18n": "ng extract-i18n --output-path src/locale",
-    "copy-build-to-www": "gulp copy-build-to-www"
+    "build": "ng build --base-href=/valentine/"
   },
   "private": true,
   "dependencies": {
