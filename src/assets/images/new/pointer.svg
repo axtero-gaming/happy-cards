@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Creator: CorelDRAW 2021 (64-Bit) -->
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="4.0882mm" height="4.0882mm" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+viewBox="0 0 21.85 21.85"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ xmlns:xodm="http://www.corel.com/coreldraw/odm/2003">
+ <defs>
+  <style type="text/css">
+   <![CDATA[
+    .fil0 {fill:#D4D4D4}
+   ]]>
+  </style>
+ </defs>
+ <g id="Слой_x0020_1">
+  <metadata id="CorelCorpID_0Corel-Layer"/>
+  <g id="_2395645116432">
+   <polygon class="fil0" points="7.94,7.94 7.94,9.93 5.96,9.93 5.96,5.96 9.93,5.96 9.93,7.94 "/>
+   <polygon class="fil0" points="13.9,7.94 13.9,9.93 9.93,9.93 9.93,7.94 "/>
+   <polygon class="fil0" points="17.87,9.93 17.87,11.92 13.9,11.92 13.9,9.93 "/>
+   <polygon class="fil0" points="21.85,11.92 21.85,13.9 19.86,13.9 19.86,15.89 17.87,15.89 17.87,11.92 "/>
+   <polygon class="fil0" points="11.92,17.87 11.92,13.9 9.93,13.9 9.93,17.87 "/>
+   <polygon class="fil0" points="9.93,13.9 9.93,9.93 7.94,9.93 7.94,13.9 "/>
+   <polygon class="fil0" points="11.92,17.87 11.92,21.85 13.9,21.85 13.9,19.86 15.89,19.86 15.89,17.87 "/>
+   <rect class="fil0" transform="matrix(-1.33216E-15 -0.0502997 -0.0502997 1.33216E-15 17.8733 17.8733)" width="39.48" height="39.48"/>
+   <rect class="fil0" transform="matrix(-1.33216E-15 -0.0502997 -0.0502997 1.33216E-15 19.8592 19.8592)" width="39.48" height="39.48"/>
+   <rect class="fil0" transform="matrix(-1.33216E-15 -0.0502997 -0.0502997 1.33216E-15 21.8452 21.8452)" width="39.48" height="39.48"/>
+   <rect class="fil0" x="3.97" y="11.92" width="1.99" height="1.99"/>
+   <rect class="fil0" x="1.99" y="9.93" width="1.99" height="1.99"/>
+   <polygon class="fil0" points="-0,3.97 1.99,3.97 1.99,9.93 -0,9.93 "/>
+   <rect class="fil0" x="1.99" y="1.99" width="1.99" height="1.99"/>
+   <path class="fil0" d="M9.93 0l0 1.99c-1.99,0 -3.97,0 -5.96,0l0 -1.99c1.99,0 3.97,0 5.96,0z"/>
+   <rect class="fil0" x="9.93" y="1.99" width="1.99" height="1.99"/>
+   <rect class="fil0" x="11.92" y="3.97" width="1.99" height="1.99"/>
+  </g>
+ </g>
+</svg>

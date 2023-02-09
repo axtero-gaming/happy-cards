@@ -1,0 +1,37 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "baseUrl": "./",
+    "outDir": "./dist/out-tsc",
+    "sourceMap": true,
+    "declaration": false,
+    "downlevelIteration": true,
+    "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true,
+    "moduleResolution": "node",
+    "importHelpers": true,
+    "forceConsistentCasingInFileNames": true,
+    "noFallthroughCasesInSwitch": true,
+    "target": "ESNext",
+    "module": "esnext",
+    "useDefineForClassFields": false,
+    "emitDecoratorMetadata": true,
+    "lib": [
+      "ESNext",
+      "dom"
+    ],
+    "paths": {
+      "@core/*": [ "./src/app/core/*" ],
+      "@shared/*": [ "./src/app/shared/*" ],
+      "@shared": [ "./src/app/shared/index" ]
+    }
+  },
+  "angularCompilerOptions": {
+    "strictTemplates": true,
+    "enableI18nLegacyMessageIdFormat": false,
+    "fullTemplateTypeCheck": true,
+    "strictInjectionParameters": true,
+    "disableTypeScriptVersionCheck": true,
+    "strictInputAccessModifiers": true
+  }
+}
