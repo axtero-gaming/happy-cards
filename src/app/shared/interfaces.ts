@@ -27,3 +27,22 @@ export interface SelectOption {
   value: string;
   hint: string;
 }
+
+/**
+ * Words Square Game
+ */
+
+export interface Coord2D {
+  x: number;
+  y: number;
+}
+
+export interface FieldDescriptor {
+  field: string[][];
+  words: WordDescriptor[];
+}
+
+export interface WordDescriptor {
+  word: string;
+  coords: Coord2D[];
+}

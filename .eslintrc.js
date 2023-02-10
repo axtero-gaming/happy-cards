@@ -96,6 +96,7 @@ module.exports =  {
     'no-duplicate-case': 'warn',
     'no-redeclare': 'warn',
     'no-return-await': 'warn',
+    'no-constant-condition': 'off',
     'no-shadow': 'off',
     '@typescript-eslint/no-shadow': [ 'warn' ],
     'no-throw-literal': 'warn',
