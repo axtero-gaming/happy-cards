@@ -1,6 +1,6 @@
 import { ChangeDetectorRef, Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 
-import { BaseComponent } from '../../shared';
+import { BaseComponent } from '@shared/base';
 
 @Component({
   selector: 'ag-root',

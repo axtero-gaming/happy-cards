@@ -2,17 +2,9 @@ import { ChangeDetectorRef, Component, OnInit, ChangeDetectionStrategy, Output, 
 
 import * as luxon from 'luxon';
 
-import { BaseComponent } from '../../shared';
-
-interface TimerDescriptor {
-  days: number;
-  hours: number;
-  minutes: number;
-  seconds: number;
-}
-
-const ValentinesDayLx = luxon.DateTime
-  .fromISO(`2023-02-14T00:00:00.000Z`, { zone: 'UTC+0' }).setZone('UTC+3', { keepLocalTime: true });
+import { BaseComponent } from '@shared/base';
+import * as Constants from '@shared/constants';
+import * as Interfaces from '@shared/interfaces';
 
 @Component({
   selector: 'ag-timer',
@@ -21,7 +13,7 @@ const ValentinesDayLx = luxon.DateTime
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class TimerComponent extends BaseComponent implements OnInit {
-  public timerDescriptor: TimerDescriptor;
+  public timerDescriptor: Interfaces.TimerDescriptor;
 
   @Output()
   private onTimerEnded: EventEmitter<boolean> = new EventEmitter();
@@ -59,10 +51,10 @@ export class TimerComponent extends BaseComponent implements OnInit {
   /**
    * Returns `true` if timer is over.
    *
-   * @param  {TimerDescriptor} timerDescriptor
+   * @param  {Interfaces.TimerDescriptor} timerDescriptor
    * @return {boolean}
    */
-  timerIsOver (timerDescriptor: TimerDescriptor): boolean {
+  timerIsOver (timerDescriptor: Interfaces.TimerDescriptor): boolean {
     return _.every(Object.values(timerDescriptor), (timeValue) => {
       return timeValue === 0;
     });
@@ -71,11 +63,11 @@ export class TimerComponent extends BaseComponent implements OnInit {
   /**
    * Returns the rest timer time to Valentines day.
    *
-   * @return {TimerDescriptor}
+   * @return {Interfaces.TimerDescriptor}
    */
-  getRestTimerTime (): TimerDescriptor {
+  getRestTimerTime (): Interfaces.TimerDescriptor {
     const nowLx = luxon.DateTime.now();
-    const diff = ValentinesDayLx.diff(nowLx, 'seconds');
+    const diff = Constants.ValentinesDayLx.diff(nowLx, 'seconds');
     if (diff.seconds < 0) {
       return {
         days: 0,

@@ -28,6 +28,15 @@ export interface SelectOption {
   hint: string;
 }
 
+
+export interface TimerDescriptor {
+  days: number;
+  hours: number;
+  minutes: number;
+  seconds: number;
+}
+
+
 /**
  * Words Square Game
  */
