@@ -12,6 +12,31 @@
   overflow: hidden;
 }
 
+.gui-els {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 50%;
+  bottom: 10%;
+  transform: translateX(-50%);
+}
+
+ag-timer {
+  display: flex;
+  
+  margin-bottom: 55px;
+}
+
+ag-cat {
+  // position: absolute;
+  // bottom: 10%;
+  // left: 50%;
+  // transform: translateX(-50%);
+  width: 280px;
+}
+
 // n is number of stars required
 @function multiple-box-shadow ($n) {
   $value: '#{random(2000)}px #{random(2000)}px #FFF';

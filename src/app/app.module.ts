@@ -6,15 +6,16 @@ import { FormsModule } from '@angular/forms';
 import { FortawesomeModule } from './shared/fortawesome.module';
 import { SharedModule } from './shared/shared.module';
 
-// Components
-import { AppComponent } from './components/app';
-import { TimerComponent } from './components/timer';
-
 // Services
 import { DOMHelper } from '@core/dom.helper';
 
 // State Store
 import { StateStore } from '@core/state-store';
+
+// Components
+import { AppComponent } from './components/app';
+import { TimerComponent } from './components/timer';
+import { CatComponent } from './components/cat';
 
 @NgModule({
   imports: [
@@ -28,6 +29,7 @@ import { StateStore } from '@core/state-store';
     // Components
     AppComponent,
     TimerComponent,
+    CatComponent,
   ],
   providers: [
     // Services

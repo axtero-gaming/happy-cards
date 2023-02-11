@@ -1,0 +1,35 @@
+
+
+:host {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.cat {
+  visibility: hidden;
+
+  &.visible {
+    visibility: visible;
+  }
+}
+
+.cat-stroke {
+  fill: rgb(0,1,0);
+}
+
+.cat-body-light {
+  fill: rgb(215, 103, 43);
+}
+
+.cat-body-dark {
+  fill: rgb(177, 73, 18);
+}
+
+.cat-highlighted-parts {
+  fill: rgb(235,200,156);
+}
+
+.cat-body-shadow {
+  fill: rgb(66, 35, 9);
+}
