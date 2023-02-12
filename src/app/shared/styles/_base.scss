@@ -13,3 +13,10 @@ $vmin-viewport: 390;
   @return math.div($value-size, $vmin-context) * 1vmin;
   @return $value-size;
 }
+
+$vh-viewport: 800;
+@function convert-to-vh($value-size, $viewport: $vmax-viewport) {
+  $vmax-context: $viewport * 0.01 * 1px;
+  @return math.div($value-size, $vmax-context) * 1vh;
+  @return $value-size;
+}

@@ -1,4 +1,5 @@
 
+@import '../../shared/styles/base';
 
 :host {
   display: flex;
@@ -21,6 +22,7 @@
 }
 
 .lovers-moon {
+  max-width: 315px;
   width: 80%;
   height: auto;
 
@@ -43,4 +45,26 @@
   width: 90%;
   height: auto;
   margin-bottom: -2px;
+}
+
+@media screen and (max-height: 844px) {
+  .love-header {
+    margin-bottom: convert-to-vh(20px, 844);
+  
+    font-size: convert-to-vh(30px, 844);
+  }
+  
+  .lovers-moon {
+    max-width: convert-to-vh(315px, 844);
+
+    margin-bottom: convert-to-vh(45px, 844);
+  }
+  
+  .lovers-container {
+    margin-bottom: convert-to-vh(25px, 844);
+  }
+  
+  .lovers {
+    max-width: convert-to-vh(355px, 844);
+  }
 }
