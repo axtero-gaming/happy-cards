@@ -51,7 +51,13 @@ $shadows-small: multiple-box-shadow(700);
 $shadows-medium: multiple-box-shadow(200);
 $shadows-big: multiple-box-shadow(100);
 
-#stars {
+.stars {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.stars-1 {
   width: 1px;
   height: 1px;
   background: transparent;
@@ -69,7 +75,7 @@ $shadows-big: multiple-box-shadow(100);
   }
 }
     
-#stars2 {
+.stars-2 {
   width: 2px;
   height: 2px;
   background: transparent;
@@ -87,7 +93,7 @@ $shadows-big: multiple-box-shadow(100);
   }
 }
     
-#stars3 {
+.stars-3 {
   width: 3px;
   height: 3px;
   background: transparent;

@@ -16,6 +16,7 @@ import { StateStore } from '@core/state-store';
 import { AppComponent } from './components/app';
 import { TimerComponent } from './components/timer';
 import { CatComponent } from './components/cat';
+import { LoveComponent } from './components/love';
 
 @NgModule({
   imports: [
@@ -30,6 +31,7 @@ import { CatComponent } from './components/cat';
     AppComponent,
     TimerComponent,
     CatComponent,
+    LoveComponent,
   ],
   providers: [
     // Services

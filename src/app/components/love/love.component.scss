@@ -1,0 +1,46 @@
+
+
+:host {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+
+  width: 100%;
+  height: 100%;
+}
+
+.love-header {
+  margin-bottom: 20px;
+
+  color: white;
+  font-size: 30px;
+  line-height: 1.35;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.lovers-moon {
+  width: 80%;
+  height: auto;
+
+  margin-bottom: 45px;
+}
+
+.lovers-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+
+  border-bottom: 3px solid white;
+  margin-bottom: 25px;
+}
+
+.lovers {
+  max-width: 355px;
+  width: 90%;
+  height: auto;
+  margin-bottom: -2px;
+}
