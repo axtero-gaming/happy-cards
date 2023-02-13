@@ -2,9 +2,22 @@
 <div class="stars stars-2"></div>
 <div class="stars stars-3"></div>
 
-<div class="gui-els">
-  <!-- <ag-timer></ag-timer>
-  <ag-cat></ag-cat> -->
+<div
+  class="card-timer"
+  [class.visible]="loversCardIsVisible === false"
+>
+  <ag-timer></ag-timer>
+  <button
+    class="open-lovers-card-btn"
+    type="button"
+    (click)="openLovers()"
+  >Открыть</button>
+  <ag-cat></ag-cat>
 </div>
-<ag-love></ag-love>
+<div
+  class="lovers-card"
+  *ngIf="loversCardIsVisible"
+>
+  <ag-love></ag-love>
+</div>
 <!-- <ag-word-square-game></ag-word-square-game> -->

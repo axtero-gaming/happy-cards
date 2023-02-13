@@ -1,6 +1,20 @@
 
 @import '../../shared/styles/base';
 
+@keyframes appearance {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@mixin AppearanceAnimation($animation-delay: 0.3s, $animation-duration: 0.3s) {
+  opacity: 0;
+  animation: $animation-duration linear $animation-delay 1 normal forwards appearance;
+}
+
 :host {
   display: flex;
   flex-direction: column;
@@ -9,6 +23,18 @@
 
   width: 100%;
   height: 100%;
+}
+
+.love-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+
+  width: 100%;
+  height: 100%;
+
+  @include AppearanceAnimation(0.3s, 0.5s);
 }
 
 .love-header {

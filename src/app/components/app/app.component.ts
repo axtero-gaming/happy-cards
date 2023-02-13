@@ -9,6 +9,8 @@ import { BaseComponent } from '@shared/base';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class AppComponent extends BaseComponent implements OnInit {
+  public loversCardIsVisible: boolean = false;
+
   constructor (
     // Angular
     protected changeDetection: ChangeDetectorRef,
@@ -18,6 +20,11 @@ export class AppComponent extends BaseComponent implements OnInit {
 
   ngOnInit (
   ): void {
+    this.forceRender();
+  }
+
+  openLovers () {
+    this.loversCardIsVisible = true;
     this.forceRender();
   }
 
