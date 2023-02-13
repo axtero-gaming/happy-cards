@@ -442,10 +442,10 @@
   --main-dark-color: #f9c035;
   --main-hover-color: #f9c035;
   --error-color: red;
-  --app-height: 100%;
-  --app-width: 100%;
-  --app-vmin: 100%;
-  --app-vmax: 100%;
+  --app-height: 100vh;
+  --app-width: 100vw;
+  --app-vmin: 100vmin;
+  --app-vmax: 100vmax;
 }
 
 * {
@@ -463,6 +463,7 @@ html, body {
   width: 100%;
   font-family: "Retro Gaming";
   line-height: 1;
+  overflow: hidden;
 }
 
 body {
