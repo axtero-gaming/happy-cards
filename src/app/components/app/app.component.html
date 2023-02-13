@@ -8,6 +8,7 @@
 >
   <ag-timer
     *ngIf="openCardIsVisible === false"
+    [timerEndedAt]="timerEndedAt"
     (onTimerEnded)="onTimerEnded()"
   ></ag-timer>
   <button

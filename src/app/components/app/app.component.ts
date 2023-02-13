@@ -1,6 +1,7 @@
 import { ChangeDetectorRef, Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 
 import { BaseComponent } from '@shared/base';
+import * as Constants from '@shared/constants';
 
 @Component({
   selector: 'ag-root',
@@ -11,6 +12,7 @@ import { BaseComponent } from '@shared/base';
 export class AppComponent extends BaseComponent implements OnInit {
   public loversCardIsVisible: boolean = false;
   public openCardIsVisible: boolean = false;
+  public timerEndedAt: string = Constants.ValentinesDayLx.toISO();
 
   constructor (
     // Angular

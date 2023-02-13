@@ -1,9 +1,8 @@
-import { ChangeDetectorRef, Component, OnInit, ChangeDetectionStrategy, Output, EventEmitter } from '@angular/core';
+import { ChangeDetectorRef, Component, OnInit, ChangeDetectionStrategy, Output, Input, EventEmitter } from '@angular/core';
 
 import * as luxon from 'luxon';
 
 import { BaseComponent } from '@shared/base';
-import * as Constants from '@shared/constants';
 import * as Interfaces from '@shared/interfaces';
 
 @Component({
@@ -14,6 +13,16 @@ import * as Interfaces from '@shared/interfaces';
 })
 export class TimerComponent extends BaseComponent implements OnInit {
   public timerDescriptor: Interfaces.TimerDescriptor;
+  private timerEndedAtLx: luxon.DateTime;
+
+  @Input(`timerEndedAt`)
+  set inTimerEndedAt (timerEndedAt: string) {
+    if (_.isNil(timerEndedAt) === true) {
+      return;
+    }
+    this.timerEndedAtLx = luxon.DateTime.fromISO(timerEndedAt, { zone: 'utc' });
+    this.render(`timerEndedAt`, [ timerEndedAt ]);
+  }
 
   @Output()
   private onTimerEnded: EventEmitter<boolean> = new EventEmitter();
@@ -55,6 +64,10 @@ export class TimerComponent extends BaseComponent implements OnInit {
    * @return {boolean}
    */
   timerIsOver (timerDescriptor: Interfaces.TimerDescriptor): boolean {
+    if (_.isNil(timerDescriptor) === true) {
+      return false;
+    }
+
     return _.every(Object.values(timerDescriptor), (timeValue) => {
       return timeValue === 0;
     });
@@ -66,8 +79,12 @@ export class TimerComponent extends BaseComponent implements OnInit {
    * @return {Interfaces.TimerDescriptor}
    */
   getRestTimerTime (): Interfaces.TimerDescriptor {
+    if (_.isNil(this.timerEndedAtLx) === true) {
+      return null;
+    }
+
     const nowLx = luxon.DateTime.now();
-    const diff = Constants.ValentinesDayLx.diff(nowLx, 'seconds');
+    const diff = this.timerEndedAtLx.diff(nowLx, 'seconds');
     if (diff.seconds < 0) {
       return {
         days: 0,
