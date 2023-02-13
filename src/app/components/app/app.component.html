@@ -6,8 +6,12 @@
   class="card-timer"
   [class.visible]="loversCardIsVisible === false"
 >
-  <ag-timer></ag-timer>
+  <ag-timer
+    *ngIf="openCardIsVisible === false"
+    (onTimerEnded)="onTimerEnded()"
+  ></ag-timer>
   <button
+    *ngIf="openCardIsVisible"
     class="open-lovers-card-btn"
     type="button"
     (click)="openLovers()"

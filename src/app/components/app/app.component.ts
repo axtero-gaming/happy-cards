@@ -10,6 +10,7 @@ import { BaseComponent } from '@shared/base';
 })
 export class AppComponent extends BaseComponent implements OnInit {
   public loversCardIsVisible: boolean = false;
+  public openCardIsVisible: boolean = false;
 
   constructor (
     // Angular
@@ -23,7 +24,22 @@ export class AppComponent extends BaseComponent implements OnInit {
     this.forceRender();
   }
 
-  openLovers () {
+  /**
+   * Hides the timer and shows the Open button.
+   *
+   * @return {void}
+   */
+  onTimerEnded (): void {
+    this.openCardIsVisible = true;
+    this.forceRender();
+  }
+
+  /**
+   * Hides the timer's view and opens card.
+   *
+   * @return {void}
+   */
+  openLovers (): void {
     this.loversCardIsVisible = true;
     this.forceRender();
   }
