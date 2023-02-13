@@ -7,6 +7,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin>
+  <script>
+    function appHeight () {
+      const doc = document.documentElement;
+      doc.style.setProperty('--app-height', `${window.innerHeight}px`);
+      doc.style.setProperty('--app-width', `${window.innerWidth}px`);
+      doc.style.setProperty('--app-vmin', `${window.innerHeight > window.innerWidth ? window.innerWidth : window.innerHeight}px`);
+      doc.style.setProperty('--app-vmax', `${window.innerHeight > window.innerWidth ? window.innerHeight : window.innerWidth}px`);
+    }
+    window.addEventListener('resize', appHeight);
+    appHeight();
+  </script>
 </head>
 <body>
   <script>

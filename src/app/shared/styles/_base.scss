@@ -3,20 +3,17 @@
 $vmax-viewport: 800;
 @function convert-to-vmax($value-size, $viewport: $vmax-viewport) {
   $vmax-context: $viewport * 0.01 * 1px;
-  @return math.div($value-size, $vmax-context) * 1vmax;
-  @return $value-size;
+  @return calc(var(--app-vmax) / 100 * ($value-size / $vmax-context));
 }
 
 $vmin-viewport: 390;
 @function convert-to-vmin($value-size, $viewport: $vmin-viewport) {
   $vmin-context: $viewport * 0.01 * 1px;
-  @return math.div($value-size, $vmin-context) * 1vmin;
-  @return $value-size;
+  @return calc(var(--app-vmin) / 100 * ($value-size / $vmax-context));
 }
 
 $vh-viewport: 800;
 @function convert-to-vh($value-size, $viewport: $vmax-viewport) {
   $vmax-context: $viewport * 0.01 * 1px;
-  @return math.div($value-size, $vmax-context) * 1vh;
-  @return $value-size;
+  @return calc(var(--app-height) / 100 * ($value-size / $vmax-context));
 }
