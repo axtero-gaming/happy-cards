@@ -15,6 +15,8 @@ import { StateStore } from '@core/state-store';
 // Components
 import { AppComponent } from './components/app';
 import { ValentineModule } from './modules/valentine/valentine.module';
+import { EightMarchModule } from './modules/eight-march/eight-march.module';
+
 @NgModule({
   imports: [
     BrowserModule,
@@ -23,6 +25,7 @@ import { ValentineModule } from './modules/valentine/valentine.module';
     FortawesomeModule,
     SharedModule,
     ValentineModule,
+    EightMarchModule,
   ],
   declarations: [
     // Components
