@@ -5,7 +5,7 @@
     "ng": "ng",
     "dev:start:server": "ng build --watch --configuration=local --base-href /",
     "dev:start": "ng serve",
-    "build": "ng build --base-href=/valentine/"
+    "build": "ng build --base-href=/happy-card/"
   },
   "private": true,
   "dependencies": {
