@@ -29,9 +29,12 @@
 
 .current-day-block {
   width: 100%;
+  position: absolute;
+  top: 15px;
+  left: 50%;
+  transform: translateX(-50%);
 
   text-align: center;
-  padding: 25px 45px;
   padding-top: 0;
 
   .day-number-block {
