@@ -2,6 +2,9 @@ import * as luxon from 'luxon';
 
 import * as Interfaces from "./interfaces";
 
+export const LastSeenDayKey = 'LastSeenDayKey';
+export const LastSeenDayCounterKey = 'LastSeenDayCounterKey';
+
 export const StartDay = luxon.DateTime
   .fromISO(`2023-02-23T00:00:00.000Z`, { zone: 'UTC+0' }).setZone('UTC+3', { keepLocalTime: true });
 export const EightMarchDayLx = luxon.DateTime

@@ -6,7 +6,7 @@
   <div class="current-day">День {{ currentDay }}</div>
 </div>
 
-<div class="current-day-container">
+<div class="current-day-container" *ngIf="currentDayNotificationIsShown === true">
   <div class="current-day-block">
     <div class="day-number-block">День {{ currentDay }}</div>
     <div class="day-separator"></div>
