@@ -10,22 +10,22 @@ export const EightMarchDayLx = luxon.DateTime
 export const DayDescriptors: Interfaces.DayDescriptor[] = [
   {
     day: 1,
-    title: 'Ясный день',
+    title: 'Застывший миг',
     flowerStep: 0,
   },
   {
     day: 2,
-    title: 'Ясный день',
-    flowerStep: 0,
+    title: 'Начало новой жизни',
+    flowerStep: 1,
   },
   {
     day: 3,
-    title: 'Ясный день',
+    title: 'Ожившие небеса',
     flowerStep: 1,
   },
   {
     day: 4,
-    title: 'Ясный день',
+    title: 'Облака, облака, облака',
     flowerStep: 1,
   },
   {
