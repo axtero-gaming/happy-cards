@@ -31,7 +31,11 @@
   from {
     opacity: 1;
   }
+  98% {
+    opacity: 0.02;
+  }
   99% {
+    display: none;
     left: 0;
     opacity: 0;
   }
