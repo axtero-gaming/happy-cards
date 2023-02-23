@@ -29,6 +29,10 @@
 
 .current-day-block {
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
   position: absolute;
   top: 15px;
   left: 50%;
@@ -46,8 +50,70 @@
   }
 
   .day-title-block {
+    width: 300px;
+
     font-family: 'Shantell Sans', cursive;
     font-size: 28px;
     font-weight: 600;
+  }
+}
+
+
+@function randomRange($min, $max) {
+  $randValue: random();
+  $randomRange: $min + floor($randValue * (($max - $min) + 1));
+  @return $randomRange;
+}
+
+.snowflake-container {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+$total: 100;
+.snowflake {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: white;
+  border-radius: 50%;
+
+  @for $i from 1 through $total {
+    // Distributes the snowflake in 0.0001vw...100vw interval by X axis
+    $random-x: random(1000000) * 0.0001vw;
+    // +/- 10vw
+    $random-offset: randomRange(-100000, 100000) * 0.0001vw;
+    // Moves snowflake to right/left on N vw
+    $random-x-end: $random-x + $random-offset;
+    // And returns snowflake to right/left on N/2 vw
+    $random-x-end-yoyo: $random-x + ($random-offset / 2);
+    // Time when snowflake will change yoyo direction
+    $random-yoyo-time: randomRange(30000, 80000) / 100000;
+    $random-yoyo-y: $random-yoyo-time * 100vh;
+    // Decrease snowflake coeff. 10x10px * coeff
+    $random-scale: random(10000) * 0.0001;
+    // Fall duration of snowflake in 10...30s interval
+    $fall-duration: randomRange(10, 30) * 1s;
+    // Defines if snowflake will be visible on screen. For example snowflake will fall 20sec, if delay is 10 sec
+    // snowflake will be moved to 50% of animation
+    $fall-delay: random(30) * -1s;
+
+    &:nth-child(#{$i}) {
+      opacity: random(10000) * 0.0001;
+      // Every snowflake starts from -10px Y position and in random X position
+      transform: translate($random-x, -10px) scale($random-scale);
+      animation: snowflake-fall-#{$i} $fall-duration $fall-delay linear infinite;
+    }
+
+    @keyframes snowflake-fall-#{$i} {
+      #{percentage($random-yoyo-time)} {
+        transform: translate($random-x-end, $random-yoyo-y) scale($random-scale);
+      }
+
+      to {
+        transform: translate($random-x-end-yoyo, 100vh) scale($random-scale);
+      }
+    }
   }
 }

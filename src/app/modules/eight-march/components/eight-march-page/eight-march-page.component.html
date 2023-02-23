@@ -1,3 +1,7 @@
+<div class="snowflake-container" *ngIf="currentDayDescriptors.snowflakesAreEnabled === true">
+  <div class="snowflake" *ngFor="let snowflake of snowflakes"></div>
+</div>
+
 <div class="current-day-block">
   <div class="day-number-block">День {{ currentDay }}</div>
   <div class="day-title-block">{{ currentDayDescriptors.title }}</div>

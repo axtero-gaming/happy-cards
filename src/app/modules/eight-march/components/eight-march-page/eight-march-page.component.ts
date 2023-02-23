@@ -13,6 +13,7 @@ import { Constants, Interfaces } from '../../shared';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class EightMarchPageComponent extends BaseComponent implements OnInit {
+  public snowflakes;
   public currentDay: number = 0;
   public activeFlower: number = 0;
   public currentDayDescriptors: Interfaces.DayDescriptor;
@@ -33,6 +34,8 @@ export class EightMarchPageComponent extends BaseComponent implements OnInit {
     this.currentDayDescriptors = Constants.DayDescriptors[nextDayNumber];
     this.currentDay = this.currentDayDescriptors.day;
     this.activeFlower = this.currentDayDescriptors.flowerStep;
+    this.snowflakes = this.currentDayDescriptors.snowflakesAreEnabled === true
+      ? new Array(this.currentDayDescriptors.snowflakesIntensity ?? 50) : [];
     this.forceRender();
   }
 
