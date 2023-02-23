@@ -27,31 +27,88 @@
   }
 }
 
-.current-day-block {
+@keyframes disappearance {
+  from {
+    opacity: 1;
+  }
+  99% {
+    left: 0;
+    opacity: 0;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+@mixin DisappearanceAnimation($animation-delay: 0.3s, $animation-duration: 0.3s) {
+  opacity: 1;
+  animation: $animation-duration linear $animation-delay 1 normal forwards disappearance;
+}
+
+.current-day-container {
   width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+
+  background-color: white;
+
+  @include DisappearanceAnimation(4s);
+}
+
+.current-day-block {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  position: absolute;
-  top: 15px;
-  left: 50%;
-  transform: translateX(-50%);
 
   text-align: center;
   padding-top: 0;
 
   .day-number-block {
-    margin-bottom: 13px;
-
     font-family: 'Shantell Sans', cursive;
     font-size: 65px;
     font-weight: 600;
   }
 
+  .day-separator {
+    height: 2px;
+    width: 200px;
+    background: black;
+
+    margin-top: 25px;
+    margin-bottom: 15px;
+  }
+
   .day-title-block {
     width: 300px;
 
+    font-family: 'Shantell Sans', cursive;
+    font-size: 28px;
+    font-weight: 600;
+  }
+}
+
+.topbar {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 5;
+
+  padding: 15px 25px;
+  opacity: 0.8;
+
+  .current-day {
     font-family: 'Shantell Sans', cursive;
     font-size: 28px;
     font-weight: 600;

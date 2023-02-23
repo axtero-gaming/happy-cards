@@ -2,9 +2,16 @@
   <div class="snowflake" *ngFor="let snowflake of snowflakes"></div>
 </div>
 
-<div class="current-day-block">
-  <div class="day-number-block">День {{ currentDay }}</div>
-  <div class="day-title-block">{{ currentDayDescriptors.title }}</div>
+<div class="topbar">
+  <div class="current-day">День {{ currentDay }}</div>
+</div>
+
+<div class="current-day-container">
+  <div class="current-day-block">
+    <div class="day-number-block">День {{ currentDay }}</div>
+    <div class="day-separator"></div>
+    <div class="day-title-block">{{ currentDayDescriptors.title }}</div>
+  </div>
 </div>
 
 <svg class="eight-march-view" width="100%" height="100%" viewBox="0 0 957 1584" version="1.1"
