@@ -14,10 +14,7 @@ import { StateStore } from '@core/state-store';
 
 // Components
 import { AppComponent } from './components/app';
-import { TimerComponent } from './components/timer';
-import { CatComponent } from './components/cat';
-import { LoveComponent } from './components/love';
-
+import { ValentineModule } from './modules/valentine/valentine.module';
 @NgModule({
   imports: [
     BrowserModule,
@@ -25,13 +22,11 @@ import { LoveComponent } from './components/love';
     FormsModule,
     FortawesomeModule,
     SharedModule,
+    ValentineModule,
   ],
   declarations: [
     // Components
     AppComponent,
-    TimerComponent,
-    CatComponent,
-    LoveComponent,
   ],
   providers: [
     // Services
