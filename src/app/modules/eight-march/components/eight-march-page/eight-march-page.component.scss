@@ -49,7 +49,7 @@ ag-flower-summer, ag-flower-winter {
 
   background-color: white;
 
-  @include DisappearanceAnimation(4s);
+  @include DisappearanceAnimation(3s);
 }
 
 .current-day-block {
