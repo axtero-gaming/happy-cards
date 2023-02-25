@@ -26,3 +26,21 @@
     visibility: visible;
   }
 }
+
+@keyframes lampLightKeyframes {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0.5;
+  }
+}
+
+@mixin lampLightAnimation($animation-duration: 0.3s) {
+  opacity: 1;
+  animation: $animation-duration linear 0s infinite alternate forwards lampLightKeyframes;
+}
+
+#lamp-light {
+  @include lampLightAnimation(1.5s);
+}
