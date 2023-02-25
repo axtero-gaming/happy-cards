@@ -14,17 +14,11 @@
   background: #d4f4ff radial-gradient(circle at top, #c8eaf6 0%, #d4f4ff 80%, #d4f4ff 100%);
 }
 
-.eight-march-view {
-  width: 100%;
-  height: auto;
-}
-
-.flower-step {
-  visibility: hidden;
-
-  &.visible {
-    visibility: visible;
-  }
+ag-flower-summer {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
 }
 
 @keyframes disappearance {
