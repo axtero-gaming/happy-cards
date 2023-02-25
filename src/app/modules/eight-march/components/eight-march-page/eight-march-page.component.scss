@@ -14,7 +14,7 @@
   background: #d4f4ff radial-gradient(circle at top, #c8eaf6 0%, #d4f4ff 80%, #d4f4ff 100%);
 }
 
-ag-flower-summer {
+ag-flower-summer, ag-flower-winter {
   position: absolute;
   left: 0;
   top: 0;
@@ -116,6 +116,7 @@ ag-flower-summer {
   position: absolute;
   left: 0;
   top: 0;
+  z-index: 3;
 }
 
 $total: 100;

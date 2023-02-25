@@ -9,6 +9,7 @@ import { SharedModule } from '@shared/shared.module';
 // Components
 import { EightMarchPageComponent } from './components/eight-march-page';
 import { FlowerSummerComponent } from './components/flower-summer';
+import { FlowerWinterComponent } from './components/flower-winter';
 
 @NgModule({
   imports: [
@@ -22,6 +23,7 @@ import { FlowerSummerComponent } from './components/flower-summer';
     // Components
     EightMarchPageComponent,
     FlowerSummerComponent,
+    FlowerWinterComponent,
   ],
   exports: [
     // Components

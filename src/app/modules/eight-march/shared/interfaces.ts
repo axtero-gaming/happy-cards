@@ -4,5 +4,6 @@ export interface DayDescriptor {
   flowerStep: number;
   snowflakesAreEnabled?: boolean;
   snowflakesIntensity?: number;
+  winter?: boolean;
 }
   
