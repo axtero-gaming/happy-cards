@@ -15,6 +15,8 @@ import { Constants, Interfaces } from '../../shared';
 export class FlowerWinterComponent extends BaseComponent implements OnInit {
   @Input()
   public activeFlower: number = 0;
+  @Input()
+  public snowdriftAreShown: number = 0;
 
   constructor (
     // Angular

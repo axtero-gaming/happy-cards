@@ -33,8 +33,12 @@ export const DayDescriptors: Interfaces.DayDescriptor[] = [
   },
   {
     day: 4,
-    title: 'Облака, облака, облака',
-    flowerStep: 1,
+    title: 'Конц вьюги',
+    flowerStep: 2,
+    winter: true,
+    snowdriftAreShown: true,
+    snowflakesAreEnabled: true,
+    snowflakesIntensity: 20,
   },
   {
     day: 5,

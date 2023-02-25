@@ -15,4 +15,8 @@
 </div>
 
 <ag-flower-summer *ngIf="currentDayDescriptors.winter !== true" [activeFlower]="activeFlower"></ag-flower-summer>
-<ag-flower-winter *ngIf="currentDayDescriptors.winter === true" [activeFlower]="activeFlower"></ag-flower-winter>
+<ag-flower-winter
+  *ngIf="currentDayDescriptors.winter === true"
+  [activeFlower]="activeFlower"
+  [snowdriftAreShown]="currentDayDescriptors.snowdriftAreShown === true"
+></ag-flower-winter>
