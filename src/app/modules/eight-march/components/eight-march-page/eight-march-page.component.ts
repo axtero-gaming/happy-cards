@@ -14,6 +14,8 @@ import { Constants, Interfaces } from '../../shared';
 })
 export class EightMarchPageComponent extends BaseComponent implements OnInit {
   public snowflakes;
+  public activeDayIndex: number = 0;
+  public currentDayIndex: number = 0;
   public currentDay: number = 0;
   public currentDayNotificationIsShown: boolean = true;
   public activeFlower: number = 0;
@@ -32,8 +34,21 @@ export class EightMarchPageComponent extends BaseComponent implements OnInit {
     const maxDayDistance = Math.floor(Math.abs(Constants.StartDay.diff(Constants.EightMarchDayLx, 'days').days));
     const nextDayNumber = Constants.EightMarchDayLx > luxon.DateTime.utc()
       ? dayDistance : Constants.DayDescriptors.length - 1;
-    this.currentDayDescriptors = Constants.DayDescriptors[nextDayNumber];
+
+    this.activeDayIndex = nextDayNumber;
+    this.currentDayIndex = nextDayNumber;
+
+    this.updateView();
+  }
+
+  /**
+   * Renders the active day.
+   */
+  updateView () {
+    this.currentDayDescriptors = Constants.DayDescriptors[this.activeDayIndex];
+
     this.currentDay = this.currentDayDescriptors.day;
+
     this.activeFlower = this.currentDayDescriptors.flowerStep;
     this.snowflakes = this.currentDayDescriptors.snowflakesAreEnabled === true
       ? new Array(this.currentDayDescriptors.snowflakesIntensity ?? 50) : [];
@@ -54,7 +69,36 @@ export class EightMarchPageComponent extends BaseComponent implements OnInit {
     // this.localStorageService.setValue(Constants.LastSeenDayKey, nextDayNumber);
     // this.localStorageService.setValue(Constants.LastSeenDayCounterKey, lastSeenDayCounter);
 
+    console.log(`-----`, this.activeFlower);
     this.forceRender();
+  }
+
+  /**
+   * Moves the active day to prev day.
+   *
+   * @return {void}
+   */
+  moveToPrevDay () {
+    if (this.activeDayIndex <= 0) {
+      return;
+    }
+
+    this.activeDayIndex -= 1;
+    this.updateView();
+  }
+
+  /**
+   * Moves the active day to next day.
+   *
+   * @return {void}
+   */
+  moveToNextDay () {
+    if (this.activeDayIndex >= this.currentDayIndex) {
+      return;
+    }
+
+    this.activeDayIndex += 1;
+    this.updateView();
   }
 
   /**

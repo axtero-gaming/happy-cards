@@ -105,7 +105,7 @@ ag-flower-summer, ag-flower-winter {
 .topbar {
   width: 100%;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
   position: absolute;
   left: 0;
@@ -114,6 +114,17 @@ ag-flower-summer, ag-flower-winter {
 
   padding: 15px 25px;
   opacity: 0.8;
+
+  .day-nav-btn {
+    font-family: 'Shantell Sans', cursive;
+    font-size: 28px;
+    font-weight: 600;
+    text-decoration: underline;
+
+    &.disabled {
+      opacity: 0.5;
+    }
+  }
 
   .current-day {
     font-family: 'Shantell Sans', cursive;

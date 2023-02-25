@@ -1,4 +1,4 @@
-import { ChangeDetectorRef, Component, OnInit, ChangeDetectionStrategy, Input } from '@angular/core';
+import { ChangeDetectorRef, Component, OnInit, ChangeDetectionStrategy, Input, OnChanges, SimpleChanges } from '@angular/core';
 import * as luxon from 'luxon';
 
 import { BaseComponent } from '@shared/base';
@@ -12,7 +12,7 @@ import { Constants, Interfaces } from '../../shared';
   styleUrls: [ './flower-summer.component.scss' ],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class FlowerSummerComponent extends BaseComponent implements OnInit {
+export class FlowerSummerComponent extends BaseComponent implements OnInit, OnChanges {
   @Input()
   public activeFlower: number = 0;
 
@@ -25,6 +25,10 @@ export class FlowerSummerComponent extends BaseComponent implements OnInit {
 
   ngOnInit (
   ): void {
+    this.forceRender();
+  }
+  
+  ngOnChanges(changes: SimpleChanges): void {
     this.forceRender();
   }
 
