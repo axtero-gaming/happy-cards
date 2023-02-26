@@ -50,8 +50,8 @@ export class EightMarchPageComponent extends BaseComponent implements OnInit {
     this.currentDay = this.currentDayDescriptors.day;
 
     this.activeFlower = this.currentDayDescriptors.flowerStep;
-    this.snowflakes = this.currentDayDescriptors.snowflakesAreEnabled === true
-      ? new Array(this.currentDayDescriptors.snowflakesIntensity ?? 50) : [];
+    this.snowflakes = this.currentDayDescriptors.snowView?.snowflakesAreEnabled === true
+      ? new Array(this.currentDayDescriptors.snowView?.snowflakesIntensity ?? 50) : [];
 
     this.currentDayNotificationIsShown = true;
     // const lastSeenDay = this.localStorageService.getValue(Constants.LastSeenDayKey);

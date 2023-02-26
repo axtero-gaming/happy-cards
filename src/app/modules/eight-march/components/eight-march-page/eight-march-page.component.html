@@ -1,4 +1,4 @@
-<div class="snowflake-container" *ngIf="currentDayDescriptors.snowflakesAreEnabled === true">
+<div class="snowflake-container" *ngIf="currentDayDescriptors.snowView?.snowflakesAreEnabled === true">
   <div class="snowflake" *ngFor="let snowflake of snowflakes"></div>
 </div>
 
@@ -23,5 +23,6 @@
 <ag-flower-winter
   *ngIf="currentDayDescriptors.winter === true"
   [activeFlower]="activeFlower"
-  [snowdriftAreShown]="currentDayDescriptors.snowdriftAreShown === true"
+  [snowdriftAreShown]="currentDayDescriptors.snowView?.snowdriftAreShown === true"
+  [ufoAreShown]="currentDayDescriptors.snowView?.ufoAreShown === true"
 ></ag-flower-winter>

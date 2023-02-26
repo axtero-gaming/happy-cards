@@ -44,3 +44,21 @@
 #lamp-light {
   @include lampLightAnimation(1.5s);
 }
+
+@keyframes ufoLightKeyframes {
+  from {
+    opacity: 0.8;
+  }
+  to {
+    opacity: 0.7;
+  }
+}
+
+@mixin ufoLightAnimation($animation-duration: 0.3s) {
+  opacity: 0.8;
+  animation: $animation-duration linear 0s infinite alternate forwards ufoLightKeyframes;
+}
+
+#ufo-lights {
+  @include ufoLightAnimation(3s);
+}

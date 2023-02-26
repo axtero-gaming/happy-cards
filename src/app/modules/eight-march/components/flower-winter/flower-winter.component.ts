@@ -17,6 +17,8 @@ export class FlowerWinterComponent extends BaseComponent implements OnInit, OnCh
   public activeFlower: number = 0;
   @Input()
   public snowdriftAreShown: number = 0;
+  @Input()
+  public ufoAreShown: number = 0;
 
   constructor (
     // Angular
