@@ -17,12 +17,15 @@
 </div>
 
 <ag-flower-summer
-  *ngIf="currentDayDescriptors.winter !== true"
+  *ngIf="currentDayDescriptors.winter !== true && currentDayDescriptors.spaceOdysseyGame === false"
   [activeFlower]="activeFlower"
 ></ag-flower-summer>
 <ag-flower-winter
-  *ngIf="currentDayDescriptors.winter === true"
+  *ngIf="currentDayDescriptors.winter === true && currentDayDescriptors.spaceOdysseyGame === false"
   [activeFlower]="activeFlower"
   [snowdriftAreShown]="currentDayDescriptors.snowView?.snowdriftAreShown === true"
   [ufoAreShown]="currentDayDescriptors.snowView?.ufoAreShown === true"
 ></ag-flower-winter>
+<ag-space-odyssey
+  *ngIf="currentDayDescriptors.spaceOdysseyGame === true"
+></ag-space-odyssey>

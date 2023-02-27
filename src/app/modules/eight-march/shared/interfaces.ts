@@ -3,6 +3,7 @@ export interface DayDescriptor {
   title: string;
   flowerStep: number;
   winter?: boolean;
+  spaceOdysseyGame?: boolean;
   snowView?: SnowView;
 }
 
