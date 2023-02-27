@@ -1,0 +1,20 @@
+<div class="stars stars-1"></div>
+<div class="stars stars-2"></div>
+<div class="stars stars-3"></div>
+
+<div
+  class="game-area"
+  [style.--starshipSize.px]="StarshipSize"
+>
+
+  <div
+    class="starship-container"
+    [style.left.px]="starshipX"
+    [style.top.px]="starshipY"
+  >
+    <ag-space-odyssey-user-ship
+      [shipView]="shipView"
+    ></ag-space-odyssey-user-ship>
+    <div class="starship-overlay"></div>
+  </div>
+</div>

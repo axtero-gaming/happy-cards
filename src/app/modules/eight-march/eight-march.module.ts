@@ -11,6 +11,7 @@ import { EightMarchPageComponent } from './components/eight-march-page';
 import { FlowerSummerComponent } from './components/flower-summer';
 import { FlowerWinterComponent } from './components/flower-winter';
 import { SpaceOdysseyComponent } from './components/space-odyssey';
+import { SpaceOdysseyUserShipComponent } from './components/space-odyssey-user-ship';
 
 @NgModule({
   imports: [
@@ -26,6 +27,7 @@ import { SpaceOdysseyComponent } from './components/space-odyssey';
     FlowerSummerComponent,
     FlowerWinterComponent,
     SpaceOdysseyComponent,
+    SpaceOdysseyUserShipComponent,
   ],
   exports: [
     // Components

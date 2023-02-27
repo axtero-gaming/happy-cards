@@ -1,7 +1,7 @@
 export interface DayDescriptor {
   day?: number;
   title: string;
-  flowerStep: number;
+  flowerStep?: number;
   winter?: boolean;
   spaceOdysseyGame?: boolean;
   snowView?: SnowView;
