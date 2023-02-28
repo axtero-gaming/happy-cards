@@ -33,7 +33,7 @@ export class EightMarchPageComponent extends BaseComponent implements OnInit {
     const dayDistance = Math.floor(Math.abs(Constants.StartDay.diffNow('days').days));
     const maxDayDistance = Math.floor(Math.abs(Constants.StartDay.diff(Constants.EightMarchDayLx, 'days').days));
     const nextDayNumber = Constants.EightMarchDayLx > luxon.DateTime.utc()
-      ? 5 : Constants.DayDescriptors.length - 1;
+      ? dayDistance : Constants.DayDescriptors.length - 1;
 
     this.activeDayIndex = nextDayNumber;
     this.currentDayIndex = nextDayNumber;
@@ -53,7 +53,7 @@ export class EightMarchPageComponent extends BaseComponent implements OnInit {
     this.snowflakes = this.currentDayDescriptors.snowView?.snowflakesAreEnabled === true
       ? new Array(this.currentDayDescriptors.snowView?.snowflakesIntensity ?? 50) : [];
 
-    this.currentDayNotificationIsShown = false;
+    this.currentDayNotificationIsShown = this.localStorageService.getValue(Constants.PreviewIsShownKey) ?? true;
     // const lastSeenDay = this.localStorageService.getValue(Constants.LastSeenDayKey);
     // let lastSeenDayCounter = this.localStorageService.getValue(Constants.LastSeenDayCounterKey) ?? 0;
     // if (nextDayNumber !== lastSeenDay) {

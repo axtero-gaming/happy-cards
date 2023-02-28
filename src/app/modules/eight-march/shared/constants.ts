@@ -2,6 +2,7 @@ import * as luxon from 'luxon';
 
 import * as Interfaces from "./interfaces";
 
+export const PreviewIsShownKey = 'PreviewIsShownKey';
 export const LastSeenDayKey = 'LastSeenDayKey';
 export const LastSeenDayCounterKey = 'LastSeenDayCounterKey';
 
@@ -60,7 +61,7 @@ export const DayDescriptors: Interfaces.DayDescriptor[] = [
   },
   {
     day: 6,
-    title: 'Погоня',
+    title: 'Погоня. Часть 1',
     spaceOdysseyGame: true,
   },
   {
