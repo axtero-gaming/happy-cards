@@ -66,8 +66,8 @@ export const DayDescriptors: Interfaces.DayDescriptor[] = [
   },
   {
     day: 7,
-    title: 'Всё также',
-    flowerStep: 3,
+    title: 'Погоня. Часть 2',
+    spaceOdysseyGame: true,
   },
   {
     day: 8,
