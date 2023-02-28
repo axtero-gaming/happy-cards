@@ -2,7 +2,10 @@
   <div class="snowflake" *ngFor="let snowflake of snowflakes"></div>
 </div>
 
-<div class="topbar">
+<div
+  class="topbar"
+  [class.light]="currentDayDescriptors.spaceOdysseyGame === true"
+>
   <div class="day-nav-btn prev-day" [class.disabled]="activeDayIndex <= 0" (click)="moveToPrevDay()">Назад</div>
   <div class="day-nav-btn next-day" [class.disabled]="activeDayIndex >= currentDayIndex" (click)="moveToNextDay()">Вперёд</div>
   <div class="current-day">День {{ currentDay }}</div>
@@ -17,11 +20,11 @@
 </div>
 
 <ag-flower-summer
-  *ngIf="currentDayDescriptors.winter !== true && currentDayDescriptors.spaceOdysseyGame === false"
+  *ngIf="currentDayDescriptors.winter !== true && currentDayDescriptors.spaceOdysseyGame !== true"
   [activeFlower]="activeFlower"
 ></ag-flower-summer>
 <ag-flower-winter
-  *ngIf="currentDayDescriptors.winter === true && currentDayDescriptors.spaceOdysseyGame === false"
+  *ngIf="currentDayDescriptors.winter === true && currentDayDescriptors.spaceOdysseyGame !== true"
   [activeFlower]="activeFlower"
   [snowdriftAreShown]="currentDayDescriptors.snowView?.snowdriftAreShown === true"
   [ufoAreShown]="currentDayDescriptors.snowView?.ufoAreShown === true"

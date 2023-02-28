@@ -115,6 +115,10 @@ ag-flower-summer, ag-flower-winter {
   padding: 15px 25px;
   opacity: 0.8;
 
+  &.light {
+    color: white;
+  }
+
   .day-nav-btn {
     font-family: 'Shantell Sans', cursive;
     font-size: 28px;
