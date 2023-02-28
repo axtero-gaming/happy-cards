@@ -111,8 +111,8 @@ export class SpaceOdysseyComponent extends BaseComponent implements OnInit {
 
     if ((this.starshipX - this.StarshipSize / 2 - this.ViewPadding) - diffX < 0
         || (this.starshipX + this.StarshipSize / 2 + this.ViewPadding) - diffX > window.innerWidth
-        || (this.starshipY - this.StarshipSize / 2 - this.ViewPadding) - diffY < 0
-        || (this.starshipY + this.StarshipSize / 2 + this.ViewPadding) - diffY > window.innerHeight) {
+        || (this.starshipY - this.StarshipSize) - diffY < 0
+        || (this.starshipY + this.StarshipSize / 2) - diffY > window.innerHeight) {
       return;
     }
 
