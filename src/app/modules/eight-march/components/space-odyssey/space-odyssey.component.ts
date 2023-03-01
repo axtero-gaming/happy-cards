@@ -99,6 +99,7 @@ export class SpaceOdysseyComponent extends BaseComponent implements OnInit {
    */
   @HostListener('document:touchmove', [ '$event' ])
   onTouchMove (event: TouchEvent): void {
+    event.preventDefault();
     if (this.movementIsEnabled === false) {
       return;
     }
