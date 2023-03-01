@@ -13,6 +13,8 @@ import { FlowerWinterComponent } from './components/flower-winter';
 import { SpaceOdysseyComponent } from './components/space-odyssey';
 import { SpaceOdysseyUserShipComponent } from './components/space-odyssey-user-ship';
 import { SpaceOdysseyAsteroidComponent } from './components/space-odyssey-asteroid';
+import { ShipPositionArbiter } from './services/ship-position.arbiter';
+import { ShipMovementDirective } from './directives/ship-movement.directive';
 
 @NgModule({
   imports: [
@@ -30,6 +32,10 @@ import { SpaceOdysseyAsteroidComponent } from './components/space-odyssey-astero
     SpaceOdysseyComponent,
     SpaceOdysseyUserShipComponent,
     SpaceOdysseyAsteroidComponent,
+    ShipMovementDirective,
+  ],
+  providers: [
+    ShipPositionArbiter,
   ],
   exports: [
     // Components

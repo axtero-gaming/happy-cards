@@ -1,8 +1,7 @@
 import { ChangeDetectorRef, Component, OnInit, ChangeDetectionStrategy, Input } from '@angular/core';
-import * as luxon from 'luxon';
 
 import { BaseComponent } from '@shared/base';
-import { Constants, Enums, Interfaces } from '../../shared';
+import { Enums } from '../../shared';
 
 @Component({
   selector: 'ag-space-odyssey-asteroid',
