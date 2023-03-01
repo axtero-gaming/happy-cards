@@ -1,8 +1,7 @@
-import { ChangeDetectorRef, Component, OnInit, ChangeDetectionStrategy, Input, HostListener } from '@angular/core';
-import * as luxon from 'luxon';
+import { ChangeDetectorRef, Component, OnInit, ChangeDetectionStrategy, HostListener } from '@angular/core';
 
 import { BaseComponent } from '@shared/base';
-import { Constants, Enums, Interfaces } from '../../shared';
+import { Enums } from '../../shared';
 
 @Component({
   selector: 'ag-space-odyssey',
@@ -12,6 +11,7 @@ import { Constants, Enums, Interfaces } from '../../shared';
 })
 export class SpaceOdysseyComponent extends BaseComponent implements OnInit {
   public shipView: Enums.ShipView = Enums.ShipView.MainView;
+  public AsteroidView = Enums.AsteroidView;
 
   public StarshipSize = 110;
   public ViewPadding = 10;
@@ -135,7 +135,7 @@ export class SpaceOdysseyComponent extends BaseComponent implements OnInit {
    *
    * @return {void}
    */
-  stopShipIDLEMovementTimer () {
+  stopShipIDLEMovementTimer (): void {
     if (_.isNil(this.shipIDLEMovementTimer) === false) {
       clearTimeout(this.shipIDLEMovementTimer);
       this.shipIDLEMovementTimer = null;
@@ -147,7 +147,7 @@ export class SpaceOdysseyComponent extends BaseComponent implements OnInit {
    *
    * @return {void}
    */
-  restartShipIDLEMovementTimer () {
+  restartShipIDLEMovementTimer (): void {
     this.stopShipIDLEMovementTimer();
 
     this.shipIDLEMovementTimer = setTimeout(() => {

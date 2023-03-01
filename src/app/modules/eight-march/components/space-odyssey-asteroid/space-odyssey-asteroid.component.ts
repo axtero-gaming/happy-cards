@@ -11,11 +11,11 @@ import { Constants, Enums, Interfaces } from '../../shared';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class SpaceOdysseyAsteroidComponent extends BaseComponent implements OnInit {
-  public AsteroidView = Enums.ShipView;
+  public AsteroidView = Enums.AsteroidView;
 
-  public asteroidView: Enums.ShipView = Enums.ShipView.MainView;
-  @Input(`shipView`)
-  set inAsteroidView (shipView: Enums.ShipView) {
+  public asteroidView: Enums.AsteroidView = Enums.AsteroidView.Size157x127;
+  @Input(`asteroidView`)
+  set inAsteroidView (shipView: Enums.AsteroidView) {
     if (_.isNil(shipView) === true) {
       return;
     }
