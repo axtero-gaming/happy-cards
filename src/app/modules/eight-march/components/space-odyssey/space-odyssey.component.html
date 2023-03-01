@@ -10,10 +10,69 @@
   class="game-area"
   [style.--starshipSize.px]="StarshipSize"
 >
+  <div class="astro-group-1" style="transform: translate(-30px, -0px);">
+    <ag-space-odyssey-asteroid
+      [asteroidView]="AsteroidView.Size157x127"
+      style="top: 150px; left: 150px"
+    ></ag-space-odyssey-asteroid>
 
-  <ag-space-odyssey-asteroid
-    [asteroidView]="AsteroidView.Size20x20"
-  ></ag-space-odyssey-asteroid>
+    <ag-space-odyssey-asteroid
+      [asteroidView]="AsteroidView.Size22x23"
+      style="top: 190px; left: 110px"
+    ></ag-space-odyssey-asteroid>
+
+    <ag-space-odyssey-asteroid
+      [asteroidView]="AsteroidView.Size38x33"
+      style="top: 220px; left: 70px"
+    ></ag-space-odyssey-asteroid>
+
+    <ag-space-odyssey-asteroid
+      [asteroidView]="AsteroidView.Size22x23"
+      style="top: 130px; left: 250px"
+    ></ag-space-odyssey-asteroid>
+
+    <ag-space-odyssey-asteroid
+      [asteroidView]="AsteroidView.Size36x35"
+      style="top: 230px; left: 220px"
+    ></ag-space-odyssey-asteroid>
+
+    <ag-space-odyssey-asteroid
+      [asteroidView]="AsteroidView.Size56x55"
+      style="top: 170px; left: 290px"
+    ></ag-space-odyssey-asteroid>
+  </div>
+  <div class="astro-group-2" style="transform: translate(20px, -40px);">
+    <ag-space-odyssey-asteroid
+      [asteroidView]="AsteroidView.Size116x107"
+      style="top: 400px; left: 210px"
+    ></ag-space-odyssey-asteroid>
+    <ag-space-odyssey-asteroid
+      [asteroidView]="AsteroidView.Size59x52"
+      style="top: 370px; left: 280px"
+    ></ag-space-odyssey-asteroid>
+    <ag-space-odyssey-asteroid
+      [asteroidView]="AsteroidView.Size38x33"
+      style="top: 460px; left: 150px"
+    ></ag-space-odyssey-asteroid>
+  </div>
+  <div class="astro-group-3" style="transform: translate(-50px, -40px);">
+    <ag-space-odyssey-asteroid
+      [asteroidView]="AsteroidView.Size129x125"
+      style="top: 580px; left: 150px"
+    ></ag-space-odyssey-asteroid>
+    <ag-space-odyssey-asteroid
+      [asteroidView]="AsteroidView.Size20x20"
+      style="top: 570px; left: 220px"
+    ></ag-space-odyssey-asteroid>
+    <ag-space-odyssey-asteroid
+      [asteroidView]="AsteroidView.Size59x52"
+      style="top: 620px; left: 90px"
+    ></ag-space-odyssey-asteroid>
+    <ag-space-odyssey-asteroid
+      [asteroidView]="AsteroidView.Size22x23"
+      style="top: 650px; left: 130px"
+    ></ag-space-odyssey-asteroid>
+  </div>
 
   <div
     class="starship-container"
