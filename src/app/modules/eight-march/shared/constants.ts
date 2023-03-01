@@ -1,6 +1,7 @@
 import * as luxon from 'luxon';
 
-import * as Interfaces from "./interfaces";
+import * as Interfaces from './interfaces';
+import * as Enums from './enums';
 
 export const PreviewIsShownKey = 'PreviewIsShownKey';
 export const LastSeenDayKey = 'LastSeenDayKey';
@@ -105,3 +106,59 @@ export const DayDescriptors: Interfaces.DayDescriptor[] = [
     flowerStep: 6,
   },
 ];
+
+
+export const AsteroidViewDescriptors: Interfaces.AsteroidViewDescriptor[] = [
+  {
+    view: Enums.AsteroidView.Size157x127,
+    width: 105,
+    height: 85,
+  },
+  {
+    view: Enums.AsteroidView.Size132x109,
+    width: 88,
+    height: 73,
+  },
+  {
+    view: Enums.AsteroidView.Size129x125,
+    width: 87,
+    height: 84,
+  },
+  {
+    view: Enums.AsteroidView.Size116x107,
+    width: 78,
+    height: 72,
+  },
+  {
+    view: Enums.AsteroidView.Size59x52,
+    width: 41,
+    height: 36,
+  },
+  {
+    view: Enums.AsteroidView.Size56x55,
+    width: 39,
+    height: 38,
+  },
+  {
+    view: Enums.AsteroidView.Size38x33,
+    width: 28,
+    height: 25,
+  },
+  {
+    view: Enums.AsteroidView.Size36x35,
+    width: 27,
+    height: 27,
+  },
+  {
+    view: Enums.AsteroidView.Size22x23,
+    width: 19,
+    height: 20,
+  },
+  {
+    view: Enums.AsteroidView.Size20x20,
+    width: 17,
+    height: 17,
+  },
+];
+
+

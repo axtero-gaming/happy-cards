@@ -1,3 +1,5 @@
+import * as Enums from './enums';
+
 export interface DayDescriptor {
   day?: number;
   title: string;
@@ -5,6 +7,12 @@ export interface DayDescriptor {
   winter?: boolean;
   spaceOdysseyGame?: boolean;
   snowView?: SnowView;
+}
+
+export interface AsteroidViewDescriptor {
+  view: Enums.AsteroidView;
+  width: number;
+  height: number;
 }
 
 export interface SnowView {
