@@ -1,0 +1,10 @@
+<div class="game-grid">
+  <ng-container *ngFor="let gridRow of this.fieldDescriptor.field">
+    <div
+      class="game-grid-cell"
+      *ngFor="let gridCell of gridRow"
+    >
+      <div class="grid-cell-box">{{ gridCell }}</div>
+    </div>
+  </ng-container>
+</div>
