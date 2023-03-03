@@ -16,12 +16,14 @@ export const DayDescriptors: Interfaces.DayDescriptor[] = [
   {
     day: 1,
     title: 'Застывший миг',
+    view: Enums.DayView.Summer,
     flowerStep: 0,
   },
   {
     day: 2,
     title: 'Начало новой жизни',
     flowerStep: 1,
+    view: Enums.DayView.Summer,
     snowView: {
       snowflakesAreEnabled: true,
       snowflakesIntensity: 50,
@@ -31,7 +33,7 @@ export const DayDescriptors: Interfaces.DayDescriptor[] = [
     day: 3,
     title: 'Лампа',
     flowerStep: 1,
-    winter: true,
+    view: Enums.DayView.Winter,
     snowView: {
       snowflakesAreEnabled: true,
       snowflakesIntensity: 100,
@@ -41,7 +43,7 @@ export const DayDescriptors: Interfaces.DayDescriptor[] = [
     day: 4,
     title: 'Конц вьюги',
     flowerStep: 2,
-    winter: true,
+    view: Enums.DayView.Winter,
     snowView: {
       snowdriftAreShown: true,
       snowflakesAreEnabled: true,
@@ -52,7 +54,7 @@ export const DayDescriptors: Interfaces.DayDescriptor[] = [
     day: 5,
     title: 'Чтооооо???',
     flowerStep: 2,
-    winter: true,
+    view: Enums.DayView.Winter,
     snowView: {
       snowdriftAreShown: true,
       snowflakesAreEnabled: true,
@@ -63,46 +65,55 @@ export const DayDescriptors: Interfaces.DayDescriptor[] = [
   {
     day: 6,
     title: 'Погоня. Часть 1',
+    view: Enums.DayView.Space,
     spaceOdysseyGame: true,
   },
   {
     day: 7,
     title: 'Погоня. Часть 2',
+    view: Enums.DayView.Space,
     spaceOdysseyGame: true,
   },
   {
     day: 8,
     title: 'Погоня. Часть 3',
+    view: Enums.DayView.Space,
     spaceOdysseyGame: true,
   },
   {
     day: 9,
     title: 'Всё также',
+    view: Enums.DayView.Summer,
     flowerStep: 3,
   },
   {
     day: 10,
     title: 'За нами следят :О',
+    view: Enums.DayView.SummerV2,
     flowerStep: 4,
   },
   {
     day: 11,
     title: 'Всё также',
+    view: Enums.DayView.SummerV2,
     flowerStep: 5,
   },
   {
     day: 12,
     title: 'Всё также',
+    view: Enums.DayView.SummerV2,
     flowerStep: 5,
   },
   {
     day: 13,
     title: 'Всё также',
+    view: Enums.DayView.SummerV2,
     flowerStep: 5,
   },
   {
     day: 14,
     title: 'Всё также',
+    view: Enums.DayView.SummerV2,
     flowerStep: 6,
   },
 ];

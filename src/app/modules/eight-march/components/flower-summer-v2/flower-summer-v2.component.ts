@@ -1,8 +1,8 @@
-import { ChangeDetectorRef, Component, OnInit, ChangeDetectionStrategy, Input, OnChanges, SimpleChanges } from '@angular/core';
-import * as luxon from 'luxon';
+import {
+  ChangeDetectorRef, Component, OnInit, ChangeDetectionStrategy, Input, OnChanges, SimpleChanges,
+} from '@angular/core';
 
 import { BaseComponent } from '@shared/base';
-import { Constants, Interfaces } from '../../shared';
 
 // 23  24 26 28 2 4 6  8
 
@@ -27,8 +27,8 @@ export class FlowerSummerV2Component extends BaseComponent implements OnInit, On
   ): void {
     this.forceRender();
   }
-  
-  ngOnChanges(changes: SimpleChanges): void {
+
+  ngOnChanges (changes: SimpleChanges): void {
     this.forceRender();
   }
 

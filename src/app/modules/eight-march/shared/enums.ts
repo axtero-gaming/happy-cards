@@ -1,3 +1,9 @@
+export enum DayView {
+  Summer = 'Summer',
+  SummerV2 = 'SummerV2',
+  Winter = 'Winter',
+  Space = 'Space',
+}
 export enum ShipView {
   MainView = 'MainView',
   LeftRollView = 'LeftRollView',

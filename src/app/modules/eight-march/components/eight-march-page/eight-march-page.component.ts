@@ -2,7 +2,7 @@ import { ChangeDetectorRef, Component, OnInit, ChangeDetectionStrategy } from '@
 import * as luxon from 'luxon';
 
 import { BaseComponent } from '@shared/base';
-import { Constants, Interfaces } from '../../shared';
+import { Constants, Interfaces, Enums } from '../../shared';
 
 // 23  24 26 28 2 4 6  8
 
@@ -13,7 +13,8 @@ import { Constants, Interfaces } from '../../shared';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class EightMarchPageComponent extends BaseComponent implements OnInit {
-  public snowflakes;
+  public DayView = Enums.DayView;
+  public snowflakes: number[];
   public activeDayIndex: number = 0;
   public currentDayIndex: number = 0;
   public currentDay: number = 0;
@@ -31,7 +32,7 @@ export class EightMarchPageComponent extends BaseComponent implements OnInit {
   ngOnInit (
   ): void {
     const dayDistance = Math.floor(Math.abs(Constants.StartDay.diffNow('days').days));
-    const maxDayDistance = Math.floor(Math.abs(Constants.StartDay.diff(Constants.EightMarchDayLx, 'days').days));
+    // const maxDayDistance = Math.floor(Math.abs(Constants.StartDay.diff(Constants.EightMarchDayLx, 'days').days));
     const nextDayNumber = Constants.EightMarchDayLx > luxon.DateTime.utc()
       ? dayDistance : Constants.DayDescriptors.length - 1;
 
@@ -44,7 +45,7 @@ export class EightMarchPageComponent extends BaseComponent implements OnInit {
   /**
    * Renders the active day.
    */
-  updateView () {
+  updateView (): void {
     this.currentDayDescriptors = Constants.DayDescriptors[this.activeDayIndex];
 
     this.currentDay = this.currentDayDescriptors.day;
@@ -77,7 +78,7 @@ export class EightMarchPageComponent extends BaseComponent implements OnInit {
    *
    * @return {void}
    */
-  moveToPrevDay () {
+  moveToPrevDay (): void {
     if (this.activeDayIndex <= 0) {
       return;
     }
@@ -91,7 +92,7 @@ export class EightMarchPageComponent extends BaseComponent implements OnInit {
    *
    * @return {void}
    */
-  moveToNextDay () {
+  moveToNextDay (): void {
     if (this.activeDayIndex >= this.currentDayIndex) {
       return;
     }

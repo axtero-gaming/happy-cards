@@ -20,15 +20,19 @@
 </div>
 
 <ag-flower-summer
-  *ngIf="currentDayDescriptors.winter !== true && currentDayDescriptors.spaceOdysseyGame !== true"
+  *ngIf="currentDayDescriptors.view === DayView.Summer"
   [activeFlower]="activeFlower"
 ></ag-flower-summer>
+<ag-flower-summer-v2
+  *ngIf="currentDayDescriptors.view === DayView.SummerV2"
+  [activeFlower]="activeFlower"
+></ag-flower-summer-v2>
 <ag-flower-winter
-  *ngIf="currentDayDescriptors.winter === true && currentDayDescriptors.spaceOdysseyGame !== true"
+  *ngIf="currentDayDescriptors.view === DayView.Winter"
   [activeFlower]="activeFlower"
   [snowdriftAreShown]="currentDayDescriptors.snowView?.snowdriftAreShown === true"
   [ufoAreShown]="currentDayDescriptors.snowView?.ufoAreShown === true"
 ></ag-flower-winter>
 <ag-space-odyssey
-  *ngIf="currentDayDescriptors.spaceOdysseyGame === true"
+  *ngIf="currentDayDescriptors.view === DayView.Space"
 ></ag-space-odyssey>
