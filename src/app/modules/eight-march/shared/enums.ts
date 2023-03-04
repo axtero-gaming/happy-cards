@@ -2,6 +2,7 @@ export enum DayView {
   Summer = 'Summer',
   SummerV2 = 'SummerV2',
   Winter = 'Winter',
+  Beach = 'Beach',
   Space = 'Space',
 }
 export enum ShipView {

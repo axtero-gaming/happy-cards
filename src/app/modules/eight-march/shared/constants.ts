@@ -94,9 +94,8 @@ export const DayDescriptors: Interfaces.DayDescriptor[] = [
   },
   {
     day: 11,
-    title: 'Всё также',
-    view: Enums.DayView.SummerV2,
-    flowerStep: 5,
+    title: 'Свежий бриз',
+    view: Enums.DayView.Beach,
   },
   {
     day: 12,

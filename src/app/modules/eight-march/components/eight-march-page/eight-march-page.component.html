@@ -27,6 +27,9 @@
   *ngIf="currentDayDescriptors.view === DayView.SummerV2"
   [activeFlower]="activeFlower"
 ></ag-flower-summer-v2>
+<ag-flower-beach
+  *ngIf="currentDayDescriptors.view === DayView.Beach"
+></ag-flower-beach>
 <ag-flower-winter
   *ngIf="currentDayDescriptors.view === DayView.Winter"
   [activeFlower]="activeFlower"
