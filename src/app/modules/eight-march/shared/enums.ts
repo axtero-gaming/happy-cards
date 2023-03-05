@@ -4,6 +4,7 @@ export enum DayView {
   Winter = 'Winter',
   Beach = 'Beach',
   Space = 'Space',
+  UnderWater = 'UnderWater',
 }
 export enum ShipView {
   MainView = 'MainView',

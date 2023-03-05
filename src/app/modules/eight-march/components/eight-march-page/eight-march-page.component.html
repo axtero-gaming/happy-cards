@@ -30,6 +30,9 @@
 <ag-flower-beach
   *ngIf="currentDayDescriptors.view === DayView.Beach"
 ></ag-flower-beach>
+<ag-flower-under-water
+  *ngIf="currentDayDescriptors.view === DayView.UnderWater"
+></ag-flower-under-water>
 <ag-flower-winter
   *ngIf="currentDayDescriptors.view === DayView.Winter"
   [activeFlower]="activeFlower"

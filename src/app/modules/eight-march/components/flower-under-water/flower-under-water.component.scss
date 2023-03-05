@@ -1,0 +1,28 @@
+
+
+:host {
+  width: 100%;
+  min-height: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+
+  overflow: hidden;
+
+  background: #d4f4ff radial-gradient(circle at left top, rgb(142 225 244) 0%, rgb(72,182,207) 50%);
+}
+
+.flower-view {
+  width: 100%;
+  height: auto;
+}
+
+.flower-step {
+  visibility: hidden;
+
+  &.visible {
+    visibility: visible;
+  }
+}
