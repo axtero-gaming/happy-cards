@@ -36,6 +36,7 @@ export class EightMarchPageComponent extends BaseComponent implements OnInit {
     const nextDayNumber = Constants.EightMarchDayLx > luxon.DateTime.utc()
       ? dayDistance : Constants.DayDescriptors.length - 1;
 
+    // const nextDayNumber = 13;
     this.activeDayIndex = nextDayNumber;
     this.currentDayIndex = nextDayNumber;
 

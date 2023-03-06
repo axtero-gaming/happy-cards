@@ -1,6 +1,7 @@
 export enum DayView {
   Summer = 'Summer',
   SummerV2 = 'SummerV2',
+  SummerV3 = 'SummerV3',
   Winter = 'Winter',
   Beach = 'Beach',
   Space = 'Space',

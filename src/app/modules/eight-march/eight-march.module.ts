@@ -18,6 +18,8 @@ import { ShipMovementDirective } from './directives/ship-movement.directive';
 import { FlowerSummerV2Component } from './components/flower-summer-v2';
 import { FlowerBeachComponent } from './components/flower-beach';
 import { FlowerUnderWaterComponent } from './components/flower-under-water';
+import { FlowerSummerV3Component } from './components/flower-summer-v3';
+
 @NgModule({
   imports: [
     CommonModule,
@@ -38,6 +40,7 @@ import { FlowerUnderWaterComponent } from './components/flower-under-water';
     ShipMovementDirective,
     FlowerBeachComponent,
     FlowerUnderWaterComponent,
+    FlowerSummerV3Component,
   ],
   providers: [
     ShipPositionArbiter,
