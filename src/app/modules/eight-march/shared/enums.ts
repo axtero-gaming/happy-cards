@@ -6,12 +6,15 @@ export enum DayView {
   Beach = 'Beach',
   Space = 'Space',
   UnderWater = 'UnderWater',
+  LastDay = 'LastDay',
 }
+
 export enum ShipView {
   MainView = 'MainView',
   LeftRollView = 'LeftRollView',
   RightRollView = 'RightRollView',
 }
+
 export enum AsteroidView {
   Size20x20 = 'Size20x20',
   Size22x23 = 'Size22x23',

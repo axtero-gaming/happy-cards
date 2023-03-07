@@ -19,6 +19,7 @@ import { FlowerSummerV2Component } from './components/flower-summer-v2';
 import { FlowerBeachComponent } from './components/flower-beach';
 import { FlowerUnderWaterComponent } from './components/flower-under-water';
 import { FlowerSummerV3Component } from './components/flower-summer-v3';
+import { FlowerLastDayComponent } from './components/flower-last-day';
 
 @NgModule({
   imports: [
@@ -41,6 +42,7 @@ import { FlowerSummerV3Component } from './components/flower-summer-v3';
     FlowerBeachComponent,
     FlowerUnderWaterComponent,
     FlowerSummerV3Component,
+    FlowerLastDayComponent,
   ],
   providers: [
     ShipPositionArbiter,
