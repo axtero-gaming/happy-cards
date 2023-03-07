@@ -5,6 +5,7 @@ export interface DayDescriptor {
   title: string;
   flowerStep?: number;
   spaceOdysseyGame?: boolean;
+  lightTopbar?: boolean;
   view: Enums.DayView;
   snowView?: SnowView;
 }

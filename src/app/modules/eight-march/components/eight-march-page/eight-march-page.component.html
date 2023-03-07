@@ -4,7 +4,7 @@
 
 <div
   class="topbar"
-  [class.light]="currentDayDescriptors.spaceOdysseyGame === true"
+  [class.light]="currentDayDescriptors.lightTopbar === true"
 >
   <div class="day-nav-btn prev-day" [class.disabled]="activeDayIndex <= 0" (click)="moveToPrevDay()">Назад</div>
   <div class="day-nav-btn next-day" [class.disabled]="activeDayIndex >= currentDayIndex" (click)="moveToNextDay()">Вперёд</div>
@@ -16,6 +16,46 @@
     <div class="day-number-block">День {{ currentDay }}</div>
     <div class="day-separator"></div>
     <div class="day-title-block">{{ currentDayDescriptors.title }}</div>
+  </div>
+</div>
+
+<div
+  class="last-day-poem-container"
+  *ngIf="currentDaysIsLast === true && poemIsVisible === true"
+  [class.hide-animation]="poemHideAnimationIsEnabled === true"
+>
+  <div class="last-day-poem-block">
+    <p class="poem-paragraph">
+      Проснувшись ото сна - она<br>
+      Ушла кормить кота, себя<br>
+      Читать, смотреть, искать!<br>
+      Что непонятно, внятно или странно...
+    </p>
+    <p class="poem-paragraph">
+      Что будоражит многие умы<br>
+      И сложно объяснить,<br>
+      Где истина и лож - прекрасно сочетают,<br>
+      Что человеку сложно проявить.
+    </p>
+    <p class="poem-paragraph">
+      Закончив умные дела<br>
+      Ушла встречать рассвет,<br>
+      Попутно вспоминая,<br>
+      Какой закат успела позабыть.
+    </p>
+    <p class="poem-paragraph">
+      И как герой любимого романа,<br>
+      Свой путь и день продумать поспешит,<br>
+      Ведь столько в мире яркого свершенья,<br>
+      Что как тут всё так уместить...
+    </p>
+    <p class="poem-paragraph">
+      Работа, спорт, учёба, развлеченья.<br>
+      И день тут завершает ход,<br>
+      Она без всякого сомненья,<br>
+      Обнимет котю, да уснёт.
+    </p>
+    <button class="poem-close-btn" type="button" (click)="closePoem()">Открыть</button>
   </div>
 </div>
 

@@ -21,6 +21,9 @@ export class EightMarchPageComponent extends BaseComponent implements OnInit {
   public currentDayNotificationIsShown: boolean = true;
   public activeFlower: number = 0;
   public currentDayDescriptors: Interfaces.DayDescriptor;
+  public currentDaysIsLast: boolean;
+  public poemIsVisible: boolean = true;
+  public poemHideAnimationIsEnabled: boolean = false;
 
   constructor (
     // Angular
@@ -39,8 +42,24 @@ export class EightMarchPageComponent extends BaseComponent implements OnInit {
     // const nextDayNumber = 13;
     this.activeDayIndex = nextDayNumber;
     this.currentDayIndex = nextDayNumber;
+    this.currentDaysIsLast = nextDayNumber === Constants.DayDescriptors.length - 1;
 
     this.updateView();
+  }
+
+  /**
+   * Closes the poem overlay.
+   *
+   * @return {void}
+   */
+  closePoem (): void {
+    this.poemHideAnimationIsEnabled = true;
+    this.render(`poemHideAnimationIsEnabled`, [ this.poemHideAnimationIsEnabled ]);
+
+    // setTimeout(() => {
+    //   this.poemIsVisible = false;
+    //   this.forceRender();
+    // }, 3100);
   }
 
   /**

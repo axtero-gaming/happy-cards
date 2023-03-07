@@ -137,6 +137,55 @@ ag-flower-summer, ag-flower-winter {
   }
 }
 
+.last-day-poem-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 8;
+
+  background-color: white;
+  
+  &.hide-animation {
+    @include DisappearanceAnimation(0s);
+  }
+}
+
+.last-day-poem-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+
+  text-align: center;
+  padding-top: 0;
+
+  .poem-paragraph {
+    margin-bottom: 20px;
+
+    font-family: 'Shantell Sans', cursive;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.35;
+  }
+
+  .poem-close-btn {
+    background: none;
+    border: 0;
+    padding: 15px 25px;
+
+    font-family: 'Shantell Sans', cursive;
+    font-size: 24px;
+    font-weight: 600;
+    text-decoration: underline;
+  }
+}
+
 
 @function randomRange($min, $max) {
   $randValue: random();

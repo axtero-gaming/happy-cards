@@ -67,18 +67,21 @@ export const DayDescriptors: Interfaces.DayDescriptor[] = [
     title: 'Погоня. Часть 1',
     view: Enums.DayView.Space,
     spaceOdysseyGame: true,
+    lightTopbar: true,
   },
   {
     day: 7,
     title: 'Погоня. Часть 2',
     view: Enums.DayView.Space,
     spaceOdysseyGame: true,
+    lightTopbar: true,
   },
   {
     day: 8,
     title: 'Погоня. Часть 3',
     view: Enums.DayView.Space,
     spaceOdysseyGame: true,
+    lightTopbar: true,
   },
   {
     day: 9,
@@ -111,6 +114,7 @@ export const DayDescriptors: Interfaces.DayDescriptor[] = [
     day: 14,
     title: 'С 8м марта!',
     view: Enums.DayView.LastDay,
+    lightTopbar: true,
   },
 ];
 
