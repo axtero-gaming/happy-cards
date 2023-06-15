@@ -37,15 +37,18 @@ const TurboRepairPhrases = [
 const MemFiles = [
   'image3.gif',
   'image9.gif',
+  'image10.gif',
+  'image13.gif',
   'image2.gif',
   'image1.gif',
   'image11.gif',
   'image4.gif',
+  'image14.gif',
   'image5.gif',
   'image12.gif',
   'image7.gif',
+  'image15.gif',
   'image8.gif',
-  'image10.gif',
   'image6.gif',
 ];
 
