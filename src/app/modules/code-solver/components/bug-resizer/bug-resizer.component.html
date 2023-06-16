@@ -1,0 +1,38 @@
+<div class="page-container">
+  <h1>Уменьшитель багов</h1>
+  <p>
+    Что ни день, то новый баг?
+    <br>
+    Слово "баг" вас уже пугает?
+    <br>
+    Наше революционное изобретение избавит вас от больших багов!
+  </p>
+  
+  <div class="area-for-code-container">
+    <div class="textarea-container" [class.reduced]="reduceIsOver === true">
+      <div *ngIf="!userCode?.length" class="area-for-code-hint">Вставьте код с вашим багом в зону и нажмите "Начать"</div>
+      <textarea
+        [(ngModel)]="userCode"
+        (input)="onChangeTextarea()"
+        [class.active]="repairInProgress"
+        class="area-for-code form-control"
+      ></textarea>
+    </div>
+  
+    <div
+      *ngIf="repairInProgress === true"
+      class="repair-overlay"
+    >
+      {{ repairPhrase }}
+    </div>
+  </div>
+  
+  <button
+    type="button"
+    class="fix-btn"
+    [class.active]="repairInProgress"
+    (click)="onClickRepair()"
+  >
+    {{ repairButtonLabel }}
+  </button>
+</div>

@@ -8,6 +8,8 @@ import { SharedModule } from '@shared/shared.module';
 
 // Components
 import { CodeSolverComponent } from './components/code-solver';
+import { BugMemFixerComponent } from './components/bug-mem-fixer';
+import { BugResizerComponent } from './components/bug-resizer';
 
 @NgModule({
   imports: [
@@ -20,6 +22,8 @@ import { CodeSolverComponent } from './components/code-solver';
   declarations: [
     // Components
     CodeSolverComponent,
+    BugMemFixerComponent,
+    BugResizerComponent,
   ],
   providers: [
   ],
