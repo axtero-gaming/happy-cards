@@ -1,0 +1,170 @@
+
+
+:host,
+.connection-container,
+.chat-container {
+  width: 100%;
+  min-height: 100%;
+  max-width: 380px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
+  overflow: hidden;
+
+}
+.connection-container {
+  justify-content: center;
+  
+  background-color: #66ceff;
+
+  h1 {
+    margin-bottom: 10px;
+
+    text-align: right;
+  }
+
+  $border-size: 3px;
+  $shadow-size: 3px;
+  .bridg-connector-btn {
+    position: relative;
+    z-index: 2;
+
+    border: $border-size solid black;
+    background-color: transparent;
+    box-shadow: $shadow-size $shadow-size 0 #222;
+    padding: 5px 15px;
+    margin-top: 10px;
+    margin: 5px;
+
+    font-size: 18px;
+    text-align: left;
+
+    outline: none;
+    resize: none;
+
+    transition: box-shadow cubic-bezier(0.4, 0, 0.2, 1) 0.15s;
+
+    &.current-user {
+      text-align: right;
+      align-self: flex-end;
+    }
+
+    &:focus, &.active {
+      box-shadow: 0 0 0 #222;
+    }
+  }
+
+  .connection-controls {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+  }
+
+  .connection-loader {
+    margin-left: 30px;
+  }
+}
+
+.chat-container {
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.messages-container {
+  width: 100%;
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column-reverse;
+  justify-content: flex-start;
+
+  padding: 15px;
+  overflow: auto;
+}
+.flexible-message-container {
+  width: 100%;
+}
+
+.message-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  margin-top: 10px;
+}
+
+$border-size: 3px;
+$shadow-size: 3px;
+.message {
+  position: relative;
+  z-index: 2;
+
+  border: $border-size solid black;
+  background-color: transparent;
+  box-shadow: $shadow-size $shadow-size 0 #222;
+  padding: 5px 15px;
+
+  font-size: 18px;
+  text-align: left;
+
+  outline: none;
+  resize: none;
+
+  transition: box-shadow cubic-bezier(0.4, 0, 0.2, 1) 0.15s;
+
+  &.current-user {
+    text-align: right;
+    align-self: flex-end;
+  }
+
+  &:focus, &.active {
+    box-shadow: 0 0 0 #222;
+  }
+}
+
+.possible-messages-container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+
+  padding: 15px;
+  padding-top: 5px;
+
+}
+
+.possible-message-btn {
+  position: relative;
+  z-index: 2;
+
+  border: $border-size solid black;
+  background-color: transparent;
+  box-shadow: $shadow-size $shadow-size 0 #222;
+  padding: 5px 15px;
+  margin-top: 10px;
+  margin: 5px;
+
+  font-size: 18px;
+  text-align: left;
+
+  outline: none;
+  resize: none;
+
+  transition: box-shadow cubic-bezier(0.4, 0, 0.2, 1) 0.15s;
+
+  &.current-user {
+    text-align: right;
+    align-self: flex-end;
+  }
+
+  &:focus, &.active {
+    box-shadow: 0 0 0 #222;
+  }
+}
+

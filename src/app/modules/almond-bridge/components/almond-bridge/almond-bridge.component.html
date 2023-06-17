@@ -1,0 +1,60 @@
+<div
+  *ngIf="connectionIsEstablished === false || connectionLoaderIsVisible === true"
+  class="connection-container"
+>
+  <div *ngIf="connectionLoaderIsVisible === false" class="connection-controls">
+    <h1>
+      <s>Миндальная</s>
+      <br>
+      Мяу&#8209;дальняя
+      <br>
+      связь
+    </h1>
+
+    <button
+      type="button"
+      class="bridg-connector-btn"
+      (click)="onClickBridgeConnector()"
+    >
+      Установить<br>соединение
+    </button>
+  </div>
+
+  <img
+    class="connection-loader"
+    *ngIf="connectionLoaderIsVisible === true"
+    src="assets/images/cat-loader-1.gif"
+  >
+  
+</div>
+
+<div
+  *ngIf="connectionIsEstablished === true && connectionLoaderIsVisible === false"
+  class="chat-container"
+>
+  <div
+    class="messages-container"
+    #messageBox
+  >
+    <div class="flexible-message-container">
+      <div
+        class="message-container"
+        *ngFor="let message of messages"
+      >
+        <div class="message" [class.current-user]="currentUserId === message.sender">{{ message.payload }}</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="possible-messages-container">
+    <button
+      *ngFor="let possibleMessage of visiblePossibleMessages"
+      type="button"
+      class="possible-message-btn"
+      (click)="onClickSendMessage(possibleMessage)"
+    >
+      {{ possibleMessage }}
+    </button>
+  </div>
+</div>
+

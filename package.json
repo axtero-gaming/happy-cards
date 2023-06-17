@@ -27,9 +27,11 @@
     "@krix/state-store": "^6.0.1",
     "lodash": "^4.17.21",
     "luxon": "^3.2.1",
+    "pubnub": "^7.2.2",
     "reflect-metadata": "^0.1.13",
     "rxjs": "~6.6.0",
     "tslib": "^2.5.0",
+    "uuid": "^9.0.0",
     "zone.js": "~0.12.0"
   },
   "devDependencies": {
@@ -40,7 +42,9 @@
     "@types/jasmine": "~4.3.1",
     "@types/lodash": "^4.14.191",
     "@types/luxon": "^3.2.0",
-    "@types/node": "^18.11.18",
+    "@types/node": "^20.3.1",
+    "@types/pubnub": "^7.2.1",
+    "@types/uuid": "^9.0.2",
     "@typescript-eslint/eslint-plugin": "^5.50.0",
     "@typescript-eslint/parser": "^5.50.0",
     "codelyzer": "^6.0.2",
