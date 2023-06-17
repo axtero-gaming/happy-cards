@@ -2,6 +2,7 @@
 
 :host,
 .connection-container,
+.connection-loader-container,
 .chat-container {
   width: 100%;
   min-height: 100%;
@@ -15,7 +16,7 @@
 }
 
 .connection-container {
-  justify-content: center;
+  justify-content: flex-end;
   
   background-color: #66ceff;
 
@@ -66,6 +67,12 @@
   .connection-loader {
     margin-left: 30px;
   }
+}
+
+.connection-loader-container {
+  justify-content: center;
+
+  background-color: #66ceff;
 }
 
 .chat-container {
@@ -164,9 +171,11 @@ $shadow-size: 3px;
     text-align: right;
     align-self: flex-end;
   }
-
-  &:focus, &.active {
-    box-shadow: 0 0 0 #222;
-  }
 }
 
+.hi-cats {
+  width: 100%;
+
+  margin-bottom: 40px;
+  margin-top: 20px;
+}

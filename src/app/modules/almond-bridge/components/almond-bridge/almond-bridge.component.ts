@@ -19,6 +19,13 @@ const PossibleMessages = [
   `Ме-оу`, `Ми-ми-ми-ми`, `Мяу-мяу`,
   `Мяу!`, `Миу`, `Мияу`, `Ме-хе-хе`,
   `Мя-хя-хя`, `Ми-хи-хи-хи`, `Мррр`,
+  `Мяу...`, `Мя***`, `МЯУ`, `Мяу.`,
+];
+const Emoji = [
+  `:)`, `:(`, `:O`, `\\(^o^)/`,
+  `(╯°□°）╯︵ ┻━┻`, `(ง’̀-‘́)ง`,
+  `¯\_(ツ)_/¯`, `(=^ェ^=)`, `( •_•)`,
+  `~(˘▾˘~)`, `｡^‿^｡`,
 ];
 
 @Component({
@@ -31,12 +38,13 @@ export class AlmondBridgeComponent extends BaseComponent implements OnInit, Afte
   public connectionIsEstablished = false;
   public connectionLoaderIsVisible = false;
   public connectionLoaderIsEnded = false;
-  public messages: Interfaces.PubNubMessage[] = [
-  ];
+  public messages: Interfaces.PubNubMessage[] = [];
   public currentUserId: string = 'qweq';
-  @ViewChild('messageBox') private messageBoxElr: ElementRef;
 
   public visiblePossibleMessages: string[] = [];
+  public visibleEmojis: string[] = [];
+
+  @ViewChild('messageBox') private messageBoxElr: ElementRef;
 
   constructor (
     // Angular
@@ -137,6 +145,7 @@ export class AlmondBridgeComponent extends BaseComponent implements OnInit, Afte
    */
   updatePossibleMessages (): void {
     this.visiblePossibleMessages = _.take(_.shuffle(PossibleMessages), 4);
+    this.visibleEmojis = _.take(_.shuffle(Emoji), 5);
     this.render(`visiblePossibleMessages`, this.visiblePossibleMessages);
   }
 

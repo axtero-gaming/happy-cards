@@ -1,8 +1,8 @@
 <div
-  *ngIf="connectionIsEstablished === false || connectionLoaderIsVisible === true"
+  *ngIf="connectionIsEstablished === false && connectionLoaderIsVisible === false"
   class="connection-container"
 >
-  <div *ngIf="connectionLoaderIsVisible === false" class="connection-controls">
+  <div class="connection-controls">
     <h1>
       <s>Миндальная</s>
       <br>
@@ -21,11 +21,19 @@
   </div>
 
   <img
+    class="hi-cats"
+    src="assets/images/hi-cats.png"
+  >
+</div>
+
+<div
+  *ngIf="connectionLoaderIsVisible === true"
+  class="connection-loader-container"
+>
+  <img
     class="connection-loader"
-    *ngIf="connectionLoaderIsVisible === true"
     src="assets/images/cat-loader-1.gif"
   >
-  
 </div>
 
 <div
@@ -54,6 +62,16 @@
       (click)="onClickSendMessage(possibleMessage)"
     >
       {{ possibleMessage }}
+    </button>
+  </div>
+  <div class="possible-messages-container">
+    <button
+      *ngFor="let visibleEmoji of visibleEmojis"
+      type="button"
+      class="possible-message-btn"
+      (click)="onClickSendMessage(visibleEmoji)"
+    >
+      {{ visibleEmoji }}
     </button>
   </div>
 </div>
