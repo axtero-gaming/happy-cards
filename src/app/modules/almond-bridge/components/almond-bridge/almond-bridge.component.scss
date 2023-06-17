@@ -116,8 +116,11 @@ $shadow-size: 3px;
   transition: box-shadow cubic-bezier(0.4, 0, 0.2, 1) 0.15s;
 
   &.current-user {
-    text-align: right;
     align-self: flex-end;
+    
+    background-color: #deffd3;
+
+    text-align: right;
   }
 
   &:focus, &.active {
