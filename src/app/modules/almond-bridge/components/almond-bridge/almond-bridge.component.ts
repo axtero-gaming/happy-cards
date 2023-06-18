@@ -6,7 +6,9 @@ import {
   AfterViewInit,
   ViewChild,
   ElementRef,
+  HostListener,
 } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 
 import { BaseComponent } from '@shared/base';
 
@@ -40,6 +42,8 @@ export class AlmondBridgeComponent extends BaseComponent implements OnInit, Afte
   public connectionLoaderIsEnded = false;
   public messages: Interfaces.PubNubMessage[] = [];
   public currentUserId: string = 'qweq';
+  public pageIsVisible: boolean = true;
+  public numOfNewMessages: number = 0;
 
   public visiblePossibleMessages: string[] = [];
   public visibleEmojis: string[] = [];
@@ -49,6 +53,7 @@ export class AlmondBridgeComponent extends BaseComponent implements OnInit, Afte
   constructor (
     // Angular
     protected changeDetection: ChangeDetectorRef,
+    private titleService: Title,
     // Services
     private messagesArbiter: MessagesArbiter,
   ) {
@@ -57,6 +62,7 @@ export class AlmondBridgeComponent extends BaseComponent implements OnInit, Afte
 
   ngOnInit (
   ): void {
+    this.updateTitle();
     this.updatePossibleMessages();
 
     const connectionObserver$ = this.messagesArbiter.getConnectionObserver()
@@ -85,6 +91,13 @@ export class AlmondBridgeComponent extends BaseComponent implements OnInit, Afte
     this.forceRender();
   }
 
+  @HostListener('document:visibilitychange')
+  onVisibilityChange (): void {
+    this.pageIsVisible = document.hidden === false;
+    this.numOfNewMessages = 0;
+    this.updateTitle();
+  }
+
   /**
    * Process text message: inserts it into template and scroll container.
    *
@@ -97,9 +110,26 @@ export class AlmondBridgeComponent extends BaseComponent implements OnInit, Afte
     }
 
     this.messages.push(message);
+    if (this.pageIsVisible === false) {
+      this.numOfNewMessages += 1;
+      this.updateTitle();
+    }
     this.forceRender();
 
     await this.scrollChatContainerToBottom();
+  }
+
+  /**
+   * Updates the app's title w/ set of notification.
+   *
+   * @return {void}
+   */
+  updateTitle (): void {
+    if (this.numOfNewMessages === 0) {
+      this.titleService.setTitle(`AlmondBridge`);
+    } else {
+      this.titleService.setTitle(`(${this.numOfNewMessages}) AlmondBridge`);
+    }
   }
 
   /**
