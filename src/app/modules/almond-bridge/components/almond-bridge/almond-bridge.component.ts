@@ -78,7 +78,6 @@ export class AlmondBridgeComponent extends BaseComponent implements OnInit, Afte
     const messageObserver$ = this.messagesArbiter.getObserver()
       // eslint-disable-next-line @typescript-eslint/no-misused-promises
       .subscribe(async (message) => {
-        console.log(`----`, message);
         if (message.type === Enums.MessageType.TextMessage) {
           await this.processTextMessage(message);
         }
@@ -105,10 +104,6 @@ export class AlmondBridgeComponent extends BaseComponent implements OnInit, Afte
    * @return {Promise<void>}
    */
   async processTextMessage (message: Interfaces.PubNubMessage): Promise<void> {
-    if (message.sender === this.messagesArbiter.sender) {
-      return;
-    }
-
     this.messages.push(message);
     if (this.pageIsVisible === false) {
       this.numOfNewMessages += 1;
@@ -161,6 +156,8 @@ export class AlmondBridgeComponent extends BaseComponent implements OnInit, Afte
     this.forceRender();
 
     await this.waitTimer(2400);
+    await this.messagesArbiter.initChat();
+
     this.connectionLoaderIsEnded = true;
     if (this.connectionIsEstablished === true) {
       this.connectionLoaderIsVisible = false;

@@ -83,13 +83,38 @@ export class MessagesArbiter extends BaseManager {
   }
 
   /**
+   * Loads last 10 messages from broker.
+   *
+   * @return {Promise<void>}
+   */
+  async initChat (): Promise<void> {
+    const lastMessagesByChannels = await this.pubNub.fetchMessages({
+      channels: [ this.globalChannel ],
+      count: 10,
+      includeUUID: true,
+    });
+
+    const globalChannelMessages = lastMessagesByChannels.channels[this.globalChannel] ?? [];
+    for (const lastMessage of globalChannelMessages) {
+      this.processMessage({
+        publisher: lastMessage.uuid,
+        message: lastMessage.message,
+      } as any as PubNub.MessageEvent, true);
+    }
+  }
+
+  /**
    * Handles all messages from the connected channels.
    *
    * @param  {PubNub.MessageEvent} messageEvent
    * @return {void}
    */
-  private processMessage (messageEvent: PubNub.MessageEvent): void {
-    console.log(`-------`, messageEvent);
+  private processMessage (messageEvent: PubNub.MessageEvent, forceSkipUserCheck: boolean = false): void {
+    if (messageEvent.publisher === this.sender && forceSkipUserCheck !== true) {
+      return;
+    }
+
+    console.log(`Message:`, messageEvent);
     if (messageEvent.message.type === Enums.MessageType.TextMessage) {
       this.sjNotif.next({
         sender: messageEvent.publisher,
