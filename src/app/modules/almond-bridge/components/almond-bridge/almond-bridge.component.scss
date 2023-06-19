@@ -86,12 +86,14 @@
   flex: 1 1 auto;
   flex-direction: column-reverse;
   justify-content: flex-start;
+  align-items: center;
 
   padding: 15px;
   overflow: auto;
 }
 .flexible-message-container {
   width: 100%;
+  max-width: 700px;
 }
 
 .message-container {

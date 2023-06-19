@@ -90,7 +90,7 @@ export class MessagesArbiter extends BaseManager {
   async initChat (): Promise<void> {
     const lastMessagesByChannels = await this.pubNub.fetchMessages({
       channels: [ this.globalChannel ],
-      count: 10,
+      count: 25,
       includeUUID: true,
     });
 
