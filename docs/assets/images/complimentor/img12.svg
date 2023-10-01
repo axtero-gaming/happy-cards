@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 159 100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;">
+    <g transform="matrix(1,0,0,1,-51.25,-225.317)">
+        <g>
+            <g transform="matrix(1,0,0,1,-140.715,12.7383)">
+                <g transform="matrix(1,0,0,1,-657.792,-786.407)">
+                    <path d="M894.879,1039.01C900.545,1037.68 905.235,1035.29 909.183,1030.72" style="fill:none;stroke:rgb(97,56,18);stroke-width:3.54px;"/>
+                </g>
+                <g transform="matrix(-1,0,0,1,1198.73,-786.407)">
+                    <path d="M894.879,1039.01C900.545,1037.68 905.235,1035.29 909.183,1030.72" style="fill:none;stroke:rgb(97,56,18);stroke-width:3.54px;"/>
+                </g>
+                <g transform="matrix(1,0,0,1,-657.792,-786.407)">
+                    <path d="M901.975,1066.18L907.266,1058.34C911.199,1053.55 921.543,1059.06 918.24,1065.08C915.878,1069.38 914.295,1071.78 913.309,1073.09C908.926,1071.56 904.999,1069.28 901.975,1066.18Z" style="fill:rgb(255,95,119);stroke:rgb(228,71,95);stroke-width:0.83px;"/>
+                </g>
+                <g transform="matrix(1,0,0,1,-657.792,-786.407)">
+                    <path d="M912.758,1061.72C910.983,1064.05 906.742,1069.99 906.742,1069.99" style="fill:rgb(228,71,95);stroke:rgb(228,71,95);stroke-width:0.83px;"/>
+                </g>
+                <g transform="matrix(1,0,0,1,-657.792,-786.407)">
+                    <path d="M896.403,1069.36C895.269,1068.06 895.404,1066.08 896.703,1064.95C898.003,1063.82 899.979,1063.95 901.113,1065.25C907.243,1072.28 917.782,1075.49 928.235,1075.43C938.711,1075.38 949.208,1072.04 955.227,1065.39C956.385,1064.12 958.363,1064.02 959.641,1065.18C960.919,1066.34 961.016,1068.32 959.858,1069.59C952.788,1077.39 940.573,1081.62 928.269,1081.68C915.941,1081.75 903.632,1077.64 896.403,1069.36Z" style="fill:rgb(97,56,18);"/>
+                </g>
+            </g>
+            <g transform="matrix(0.873227,0,0,1,-89.442,215.409)">
+                <rect x="161.117" y="9.908" width="181.174" height="99.333" style="fill:none;"/>
+            </g>
+        </g>
+    </g>
+</svg>

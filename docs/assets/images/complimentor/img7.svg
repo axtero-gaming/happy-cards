@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 159 100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <g transform="matrix(1,0,0,1,-1194.91,-9.90805)">
+        <g>
+            <g>
+                <g transform="matrix(1.19288,0,0,1.19288,557.659,-1164.57)">
+                    <circle cx="579.723" cy="1022.21" r="6.424" style="fill:rgb(89,54,35);"/>
+                </g>
+                <g transform="matrix(0.856379,0,0,0.856379,762.988,-823.492)">
+                    <circle cx="563.967" cy="1021.3" r="1.986" style="fill:white;"/>
+                </g>
+                <g transform="matrix(1.19288,0,0,1.19288,607.648,-1164.57)">
+                    <circle cx="579.723" cy="1022.21" r="6.424" style="fill:rgb(89,54,35);"/>
+                </g>
+                <g transform="matrix(0.856379,0,0,0.856379,812.977,-823.492)">
+                    <circle cx="563.967" cy="1021.3" r="1.986" style="fill:white;"/>
+                </g>
+                <g transform="matrix(1,0,0,1,-59.9632,-14.462)">
+                    <g transform="matrix(1,0,0,1,-79.4865,-803.814)">
+                        <path d="M1399.88,907.258C1402.67,902.747 1407.67,899.74 1413.36,899.74C1419.05,899.74 1424.05,902.747 1426.85,907.258C1423,908.938 1418.36,909.92 1413.36,909.92C1408.37,909.92 1403.73,908.938 1399.88,907.258Z" style="fill:rgb(255,95,119);"/>
+                    </g>
+                    <g transform="matrix(1,0,0,1,-79.4865,-803.814)">
+                        <path d="M1399.88,907.258C1393.51,904.477 1389.33,899.784 1389.33,894.467L1437.4,894.467C1437.4,899.784 1433.21,904.477 1426.85,907.258C1424.05,902.747 1419.05,899.74 1413.36,899.74C1407.67,899.74 1402.67,902.747 1399.88,907.258Z" style="fill:rgb(89,54,35);"/>
+                    </g>
+                    <g transform="matrix(1.0069,0,0,1,-89.1577,-803.814)">
+                        <rect x="1401.69" y="894.467" width="9.943" height="4.118" style="fill:white;"/>
+                    </g>
+                    <g transform="matrix(1.0069,0,0,1,-76.0512,-803.814)">
+                        <rect x="1401.69" y="894.467" width="9.943" height="4.118" style="fill:white;"/>
+                    </g>
+                </g>
+            </g>
+            <g transform="matrix(0.873227,0,0,1,1054.21,0)">
+                <rect x="161.117" y="9.908" width="181.174" height="99.333" style="fill:none;"/>
+            </g>
+        </g>
+    </g>
+</svg>
