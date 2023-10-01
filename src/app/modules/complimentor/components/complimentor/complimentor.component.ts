@@ -158,6 +158,23 @@ export class ComplimentorComponent extends BaseComponent implements OnInit, Afte
     this.forceRender();
   }
 
+  goAreaCompliment (event: MouseEvent): void {
+    if (event.pageX > window.innerWidth / 2) {
+      this.goNextCompliment();
+    } else {
+      this.goPrevCompliment();
+    }
+  }
+
+  goPrevCompliment (): void {
+    const activeComplimentIndex = _.findIndex(this.compliments, { id: this.activeComplimentId });
+    if (activeComplimentIndex <= 0) {
+      return;
+    }
+    this.activeComplimentId -= 1;
+    this.updateView();
+  }
+
   goNextCompliment (): void {
     const activeComplimentIndex = _.findIndex(this.compliments, { id: this.activeComplimentId });
     if (activeComplimentIndex >= this.compliments.length - 1) {
