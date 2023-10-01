@@ -63,7 +63,7 @@ export class ComplimentorComponent extends BaseComponent implements OnInit, Afte
     {
       id: ComplimentorComponent.getNextId(),
       img: `assets/images/complimentor/img7.svg`,
-      text: `Ооо, постой, а я<br>знаю интересное`,
+      text: `Ооо, точно, я же<br>кое что знаю`,
     },
     {
       id: ComplimentorComponent.getNextId(),
@@ -73,7 +73,7 @@ export class ComplimentorComponent extends BaseComponent implements OnInit, Afte
     {
       id: ComplimentorComponent.getNextId(),
       img: `assets/images/complimentor/img9.svg`,
-      text: `Хоть Лими прожил<br>и не много, но Лими<br>повстречал свою<br>звезду (^o^)/`,
+      text: `Хоть Лими прожил<br>и не много, но Лими<br>тоже повстречал свою<br>звезду (^o^)/`,
     },
     {
       id: ComplimentorComponent.getNextId(),
