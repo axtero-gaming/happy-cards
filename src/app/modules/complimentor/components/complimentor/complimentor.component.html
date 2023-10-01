@@ -5,3 +5,7 @@
   <img class="compliment-img" [src]="activeCompliment.img">
   <div class="compliment-text" [innerHTML]="activeCompliment.text"></div>
 </div>
+
+<div class="img-loader">
+  <img *ngFor="let compliment of compliments" [src]="compliment.img">
+</div>
