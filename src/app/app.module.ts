@@ -17,7 +17,8 @@ import { AppComponent } from './components/app';
 // import { ValentineModule } from './modules/valentine/valentine.module';
 // import { EightMarchModule } from './modules/eight-march/eight-march.module';
 // import { CodeSolverModule } from './modules/code-solver/code-solver.module';
-import { AlmondBridgeModule } from './modules/almond-bridge/almond-bridge.module';
+// import { AlmondBridgeModule } from './modules/almond-bridge/almond-bridge.module';
+import { ComplimentorModule } from './modules/complimentor/complimentor.module';
 
 @NgModule({
   imports: [
@@ -26,7 +27,7 @@ import { AlmondBridgeModule } from './modules/almond-bridge/almond-bridge.module
     FormsModule,
     FortawesomeModule,
     SharedModule,
-    AlmondBridgeModule,
+    ComplimentorModule,
   ],
   declarations: [
     // Components

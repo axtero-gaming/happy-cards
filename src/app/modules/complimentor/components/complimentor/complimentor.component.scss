@@ -1,0 +1,28 @@
+
+
+:host, .compliment-container {
+  width: 100%;
+  min-height: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center ;
+  align-items: center;
+
+  overflow: hidden;
+}
+
+:host {
+  background-color: #FECE00;
+}
+
+.compliment-img {
+  width: 150px;
+}
+
+.compliment-text {
+  font-family: "Chalkboard SE";
+  font-size: 28px;
+  text-align: center;
+  line-height: 1.15;
+}
