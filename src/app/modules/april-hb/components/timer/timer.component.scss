@@ -1,0 +1,55 @@
+
+
+:host {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.timer {
+  display: flex;
+
+  color: white;
+
+  .timer-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 3;
+
+    margin: 0 5px;
+  }
+
+  .timer-section-value {
+    width: 64px;
+    position: relative;
+    z-index: 2;
+
+    margin-bottom: 6px;
+
+    font-family: "Chalkboard SE";
+    font-size: 44px;
+    text-align: center;
+  }
+  .timer-section-title {
+    font-family: "Chalkboard SE";
+    font-size: 10px;
+    text-transform: uppercase;
+  }
+
+
+  .timer-section-separator {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .timer-separator-value {
+    font-size: 32px;
+  }
+  .timer-separator-stub {
+    font-size: 10px;
+  }
+}

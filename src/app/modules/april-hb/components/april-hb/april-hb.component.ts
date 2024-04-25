@@ -4,11 +4,12 @@ import {
   OnInit,
   ChangeDetectionStrategy,
 } from '@angular/core';
-import { Title } from '@angular/platform-browser';
+import * as luxon from 'luxon';
 
 import { BaseComponent } from '@shared/base';
 
-import { MessagesArbiter } from '../../services/message.arbiter';
+export const HappyBirthdayDateLx = luxon.DateTime
+  .fromISO(`2024-04-27T00:00:00.000Z`, { zone: 'UTC+0' }).setZone('UTC+3', { keepLocalTime: true });
 
 @Component({
   selector: 'ag-april-hb',
@@ -17,17 +18,39 @@ import { MessagesArbiter } from '../../services/message.arbiter';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class AprilHbComponent extends BaseComponent implements OnInit {
+  public cardIsVisible: boolean = true;
+  public openCardIsVisible: boolean = false;
+  public timerEndedAt: string = HappyBirthdayDateLx.toISO();
+
   constructor (
     // Angular
     protected changeDetection: ChangeDetectorRef,
-    private titleService: Title,
-    // Services
-    private messagesArbiter: MessagesArbiter,
   ) {
     super(changeDetection);
   }
 
   ngOnInit (
   ): void {
+    this.forceRender();
+  }
+
+  /**
+   * Hides the timer and shows the Open button.
+   *
+   * @return {void}
+   */
+  onTimerEnded (): void {
+    this.openCardIsVisible = true;
+    this.forceRender();
+  }
+
+  /**
+   * Hides the timer's view and opens card.
+   *
+   * @return {void}
+   */
+  openCard (): void {
+    this.cardIsVisible = true;
+    this.forceRender();
   }
 }

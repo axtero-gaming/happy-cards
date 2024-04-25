@@ -11,6 +11,7 @@ import { MessagesArbiter } from './services/message.arbiter';
 
 // Components
 import { AprilHbComponent } from './components/april-hb';
+import { TimerComponent } from './components/timer';
 
 @NgModule({
   imports: [
@@ -23,6 +24,7 @@ import { AprilHbComponent } from './components/april-hb';
   declarations: [
     // Components
     AprilHbComponent,
+    TimerComponent,
   ],
   providers: [
     MessagesArbiter,

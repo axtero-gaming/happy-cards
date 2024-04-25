@@ -1,7 +1,24 @@
-<div class="hb-text">
-  С днём<br>рождения!
+<div
+  class="hb-timer"
+  [class.visible]="cardIsVisible === false"
+>
+  <ag-timer
+    *ngIf="openCardIsVisible === false"
+    [timerEndedAt]="timerEndedAt"
+    (onTimerEnded)="onTimerEnded()"
+  ></ag-timer>
+  <button
+    *ngIf="openCardIsVisible"
+    class="open-card-btn"
+    type="button"
+    (click)="openCard()"
+  >Открыть</button>
 </div>
-<div [class.not-loaded]="false">
+
+<div [class.not-loaded]="!cardIsVisible">
+  <div class="hb-text">
+    С Днём<br>рождения!
+  </div>
   <div class="night"></div>
   <div class="flowers">
     <div class="flower flower--1">

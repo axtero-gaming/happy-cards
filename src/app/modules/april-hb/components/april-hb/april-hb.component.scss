@@ -11,15 +11,53 @@
   perspective: 1000px;
 }
 
+.hb-timer {
+  position: absolute;
+  bottom: 135vmin;
+  z-index: 15;
+
+  opacity: 0;
+  transition: 1s opacity;
+
+  &.visible {
+    opacity: 1;
+  }
+}
+
+.open-card-btn {
+  background: none;
+  border: none;
+  margin-bottom: 55px;
+
+  color: white;
+  font-family: "Chalkboard SE";
+  font-size: 44px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+
+  cursor: pointer;
+}
+
 .hb-text {
   position: absolute;
   bottom: 135vmin;
+  left: 50%;
   z-index: 10;
+  transform: translateX(-50%);
 
   color: white;
   font-family: "Chalkboard SE";
   font-size: 52px;
   text-align: center;
+
+  opacity: 0;
+  transition: 2.5s 3.5s opacity;
+}
+
+:not(.not-loaded) {
+  .hb-text {
+    opacity: 1;
+  }
 }
 
 .night {

@@ -1,0 +1,50 @@
+<div class="timer">
+  <div
+    class="timer-section"
+  >
+    <div
+      class="timer-section-value"
+      [class.emptyChar]="timerDescriptor?.days < 10"
+    >{{ timerDescriptor?.days }}</div>
+    <div class="timer-section-title">Дней</div>
+  </div>
+  <div
+    class="timer-section-separator"
+  >
+    <div class="timer-separator-value">:</div>
+    <div class="timer-separator-stub">&nbsp;</div>
+  </div>
+  <div 
+    class="timer-section"
+  >
+    <div
+      class="timer-section-value"
+      [class.emptyChar]="timerDescriptor?.hours < 10"
+    >{{ timerDescriptor?.hours }}</div>
+    <div class="timer-section-title">Часов</div>
+  </div>
+  <div
+    class="timer-section-separator"
+  >
+    <div class="timer-separator-value">:</div>
+    <div class="timer-separator-stub">&nbsp;</div>
+  </div>
+  <div class="timer-section">
+    <div
+      class="timer-section-value"
+      [class.emptyChar]="timerDescriptor?.minutes < 10"
+    >{{ timerDescriptor?.minutes }}</div>
+    <div class="timer-section-title">Минут</div>
+  </div>
+  <div class="timer-section-separator">
+    <div class="timer-separator-value">:</div>
+    <div class="timer-separator-stub">&nbsp;</div>
+  </div>
+  <div class="timer-section">
+    <div
+      class="timer-section-value"
+      [class.emptyChar]="timerDescriptor?.seconds < 10"
+    >{{ timerDescriptor?.seconds }}</div>
+    <div class="timer-section-title">Секунд</div>
+  </div>
+</div>
