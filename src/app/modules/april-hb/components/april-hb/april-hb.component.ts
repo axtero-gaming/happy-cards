@@ -18,7 +18,7 @@ export const HappyBirthdayDateLx = luxon.DateTime
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class AprilHbComponent extends BaseComponent implements OnInit {
-  public cardIsVisible: boolean = true;
+  public cardIsVisible: boolean = false;
   public openCardIsVisible: boolean = false;
   public timerEndedAt: string = HappyBirthdayDateLx.toISO();
 
