@@ -18,7 +18,8 @@ import { AppComponent } from './components/app';
 // import { EightMarchModule } from './modules/eight-march/eight-march.module';
 // import { CodeSolverModule } from './modules/code-solver/code-solver.module';
 // import { AlmondBridgeModule } from './modules/almond-bridge/almond-bridge.module';
-import { ComplimentorModule } from './modules/complimentor/complimentor.module';
+// import { ComplimentorModule } from './modules/complimentor/complimentor.module';
+import { AprilHbModule } from './modules/april-hb/april-hb.module';
 
 @NgModule({
   imports: [
@@ -27,7 +28,7 @@ import { ComplimentorModule } from './modules/complimentor/complimentor.module';
     FormsModule,
     FortawesomeModule,
     SharedModule,
-    ComplimentorModule,
+    AprilHbModule,
   ],
   declarations: [
     // Components

@@ -10,8 +10,6 @@ export class BaseComponent extends BaseManager implements OnDestroy {
     protected changeDetection: ChangeDetectorRef,
   ) {
     super();
-
-    this.changeDetection.detach();
   }
 
   /**
