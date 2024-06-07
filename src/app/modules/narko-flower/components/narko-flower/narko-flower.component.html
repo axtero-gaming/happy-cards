@@ -1,3 +1,14 @@
+<div
+  class="hb-timer"
+  [class.visible]="cardIsVisible === false"
+>
+  <button
+    class="open-card-btn"
+    type="button"
+    (click)="openCard()"
+  >Открыть</button>
+</div>
+
 <div class="container">
   <svg id="svg" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600">
     <style type="text/css">

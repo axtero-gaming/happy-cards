@@ -574,4 +574,15 @@ export class NarkoFlowerComponent extends BaseComponent implements AfterViewChec
       .to(this.stem_1, 0.3, { x: 0, morphSVG: this.stem_1, ease: Power0.easeNone }, 'three+=0.5');
     return tlHappy2;
   }
+
+  cardIsVisible = false;
+  /**
+   * Hides the timer's view and opens card.
+   *
+   * @return {void}
+   */
+  openCard(): void {
+    this.cardIsVisible = true;
+    this.forceRender();
+  }
 }
