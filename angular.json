@@ -34,11 +34,11 @@
               "src/assets"
             ],
             "scripts": [
-              "src/assets/morp.js",
+              "src/assets/morp.js"
             ],
             "styles": [
               "src/styles.scss"
-            ],
+            ]
           },
           "defaultConfiguration": "local",
           "configurations": {
