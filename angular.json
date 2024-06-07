@@ -33,6 +33,9 @@
               "src/favicon.ico",
               "src/assets"
             ],
+            "scripts": [
+              "src/assets/morp.js",
+            ],
             "styles": [
               "src/styles.scss"
             ],
