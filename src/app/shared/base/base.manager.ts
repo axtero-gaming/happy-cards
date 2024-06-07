@@ -9,8 +9,7 @@ export class BaseManager {
   protected subscriptionManager: SubscriptionManager;
   protected shouldUpdateManager: ShouldUpdateManager;
 
-  constructor (
-  ) {
+  constructor() {
     this.localStorageService = new LocalStorageService();
     this.subscriptionManager = new SubscriptionManager();
     this.shouldUpdateManager = new ShouldUpdateManager();
@@ -22,8 +21,7 @@ export class BaseManager {
    *
    * @return {void}
    */
-  $destroy (
-  ): void {
+  $destroy(): void {
     this.subscriptionManager.$destroy();
   }
 
@@ -33,9 +31,7 @@ export class BaseManager {
    * @param  {Subscription} sub
    * @return {void}
    */
-  protected subscribe (
-    subscription: Subscription,
-  ): void {
+  protected subscribe(subscription: Subscription): void {
     this.subscriptionManager.subscribe(subscription);
   }
 
@@ -46,9 +42,7 @@ export class BaseManager {
    * @param  {any} manager
    * @return {void}
    */
-  protected registerManager (
-    manager: any,
-  ): void {
+  protected registerManager(manager: any): void {
     this.subscriptionManager.registerManager(manager);
   }
 
@@ -59,10 +53,7 @@ export class BaseManager {
    * @param  {any[]} params
    * @return {boolean}
    */
-  protected shouldUpdate (
-    label: string,
-    params: any[],
-  ): boolean {
+  protected shouldUpdate(label: string, params: any[]): boolean {
     return this.shouldUpdateManager.shouldUpdate(label, params);
   }
 
@@ -72,9 +63,7 @@ export class BaseManager {
    * @param  {string} key
    * @return {void}
    */
-  protected resetKey (
-    key: string,
-  ): void {
+  protected resetKey(key: string): void {
     this.shouldUpdateManager.resetKey(key);
   }
 
@@ -84,9 +73,7 @@ export class BaseManager {
    * @param  {number} waitFor
    * @return {Promise<void>}
    */
-  protected async waitTimer (
-    waitFor: number,
-  ): Promise<void> {
+  protected async waitTimer(waitFor: number): Promise<void> {
     await new Promise((resolve) => {
       setTimeout(() => {
         resolve(null);
@@ -101,10 +88,7 @@ export class BaseManager {
    * @param  {number} max
    * @return {number}
    */
-  protected getRandomInt (
-    min: number,
-    max: number,
-  ): number {
+  protected getRandomInt(min: number, max: number): number {
     return Math.floor(Math.random() * (max - min)) + min;
   }
 }

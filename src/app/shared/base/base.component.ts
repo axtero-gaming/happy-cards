@@ -6,9 +6,7 @@ import { BaseManager } from './base.manager';
   template: '<div></div>',
 })
 export class BaseComponent extends BaseManager implements OnDestroy {
-  constructor (
-    protected changeDetection: ChangeDetectorRef,
-  ) {
+  constructor(protected changeDetection: ChangeDetectorRef) {
     super();
   }
 
@@ -17,8 +15,7 @@ export class BaseComponent extends BaseManager implements OnDestroy {
    *
    * @return {void}
    */
-  ngOnDestroy (
-  ): void {
+  ngOnDestroy(): void {
     this.$destroy();
   }
 
@@ -29,10 +26,7 @@ export class BaseComponent extends BaseManager implements OnDestroy {
    * @param  {any[]} params
    * @return {void}
    */
-  render (
-    label: string,
-    params: any[],
-  ): void {
+  render(label: string, params: any[]): void {
     if (this.shouldUpdate(label, params) === false) {
       return;
     }
@@ -45,8 +39,7 @@ export class BaseComponent extends BaseManager implements OnDestroy {
    *
    * @return {void}
    */
-  forceRender (
-  ): void {
+  forceRender(): void {
     this.changeDetection.detectChanges();
   }
 }

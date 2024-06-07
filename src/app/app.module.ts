@@ -19,7 +19,8 @@ import { AppComponent } from './components/app';
 // import { CodeSolverModule } from './modules/code-solver/code-solver.module';
 // import { AlmondBridgeModule } from './modules/almond-bridge/almond-bridge.module';
 // import { ComplimentorModule } from './modules/complimentor/complimentor.module';
-import { AprilHbModule } from './modules/april-hb/april-hb.module';
+// import { AprilHbModule } from './modules/april-hb/april-hb.module';
+import { NarkoFlowerModule } from './modules/narko-flower/narko-flower.module';
 
 @NgModule({
   imports: [
@@ -28,7 +29,7 @@ import { AprilHbModule } from './modules/april-hb/april-hb.module';
     FormsModule,
     FortawesomeModule,
     SharedModule,
-    AprilHbModule,
+    NarkoFlowerModule,
   ],
   declarations: [
     // Components
