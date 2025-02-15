@@ -1,0 +1,35 @@
+
+
+:host {
+  --ag-heart-color-1: #347aff;
+  --ag-heart-bg-1: #fa9fed;
+  --ag-heart-color-2: #ca8fff;
+  --ag-heart-bg-2: #ffe264;
+  --ag-heart-color-3: #ff414d;
+  --ag-heart-bg-3: #ffe264;
+  --ag-heart-color-4: #00deb7;
+  --ag-heart-bg-4: #347aff;
+  --ag-heart-color-5: #347aff;
+  --ag-heart-bg-5: #00deb7;
+  --ag-heart-color-6: #fe82ea;
+  --ag-heart-bg-6: #347aff;
+
+  width: 100%;
+  min-height: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  background: #fa9fed;
+  overflow: hidden;
+}
+
+.heart {
+  width: 100%;
+  position: absolute;
+  left: 50%;
+  bottom: -50%;
+
+  transform: translate(-50%, -70%) scale(1.3);
+}

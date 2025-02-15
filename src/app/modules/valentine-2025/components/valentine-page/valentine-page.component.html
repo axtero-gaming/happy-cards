@@ -1,0 +1,34 @@
+<div
+  class="card"
+  [style.backgroundColor]="activePreset.bg"
+  (click)="changePreset()"
+>
+  <div class="card-text">
+    Happy <span class="highlighted-text">Valentine's</span> day
+  </div>
+
+  <div class="heart" (click)="changeHeart($event)">
+    <ag-heart class="heart-body" [fill]="activePreset.heart"></ag-heart>
+    <img
+      class="heart-face"
+      [src]="faceURL"
+    >
+  </div>
+
+  <div class="items">
+    <div
+      *ngFor="let item of items"
+      class="card-item"
+      [style.transform]="getItemTransform(item)"
+    >
+      <div [style.transform]="getItemRotate(item)">
+        <img
+          class="card-item-img"
+          [src]="getItemURL(item)"
+          [style.width.px]="item.size"
+          [style.animationDuration]="item.animationDuration"
+        />
+      </div>
+    </div>
+  </div>
+</div>

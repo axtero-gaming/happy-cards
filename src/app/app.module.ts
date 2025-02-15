@@ -14,7 +14,8 @@ import { SharedModule } from './shared/shared.module';
 
 // Components
 import { AppComponent } from './components/app';
-import { FlyingHeartModule } from './modules/flying-heart/flying-heart.module';
+// import { FlyingHeartModule } from './modules/flying-heart/flying-heart.module';
+import { Valentine2025Module } from './modules/valentine-2025/valentine-2025.module';
 // import { ValentineModule } from './modules/valentine/valentine.module';
 // import { EightMarchModule } from './modules/eight-march/eight-march.module';
 // import { CodeSolverModule } from './modules/code-solver/code-solver.module';
@@ -31,7 +32,8 @@ import { FlyingHeartModule } from './modules/flying-heart/flying-heart.module';
     FortawesomeModule,
     SharedModule,
     // NarkoFlowerModule,
-    FlyingHeartModule,
+    // FlyingHeartModule,
+    Valentine2025Module,
   ],
   declarations: [
     // Components

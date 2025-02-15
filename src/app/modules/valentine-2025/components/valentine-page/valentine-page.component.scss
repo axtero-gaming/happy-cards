@@ -1,0 +1,96 @@
+
+
+:host {
+  --ag-heart-color-1: #347aff;
+  --ag-heart-bg-1: #fa9fed;
+  --ag-heart-color-2: #ca8fff;
+  --ag-heart-bg-2: #ffe264;
+  --ag-heart-color-3: #ff414d;
+  --ag-heart-bg-3: #ffe264;
+  --ag-heart-color-4: #00deb7;
+  --ag-heart-bg-4: #347aff;
+  --ag-heart-color-5: #347aff;
+  --ag-heart-bg-5: #00deb7;
+  --ag-heart-color-6: #fe82ea;
+  --ag-heart-bg-6: #347aff;
+
+  width: 100%;
+  min-height: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  background: #fa9fed;
+  overflow: hidden;
+}
+
+.card-text {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, -540px);
+
+  color: white;
+  font-family: 'Fredoka', sans-serif;
+  font-size: 44px;
+  line-height: 1.1;
+  font-weight: 600;
+}
+.highlighted-text {
+  color: #ff414d;
+  font-weight: 600;
+}
+
+.card {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+.heart {
+  width: 520px;
+  height: 560px;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+
+  transform: translate(-50%, 320px) scale(1.3);
+}
+
+.heart-face {
+  width: 170px;
+  position: absolute;
+  z-index: 5;
+  top: 90px;
+  left: 50%;
+
+  transform: translate(-50%, 0);
+}
+
+.card-item {
+  width: 80px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+}
+
+.card-item-img {
+  width: 100%;
+  animation: swinging-1 6s cubic-bezier(0.25, 0.25, 0.25, 0.5) forwards infinite;
+}
+
+@keyframes swinging-1 {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(10deg);
+  }
+  75% {
+    transform: rotate(-10deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
